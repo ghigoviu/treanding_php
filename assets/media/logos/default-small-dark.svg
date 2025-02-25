@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="160px" height="120px" viewBox="-38.5 -24.5 160 120" enable-background="new -38.5 -24.5 160 120" xml:space="preserve">
+<path fill="#EF305E" d="M61.114,2.777l15.208,47.354c0.83,2.582-1.097,5.223-3.809,5.223H61.33c-1.742,0-3.284-1.129-3.813-2.789
+	L42.482,5.21C41.664,2.631,43.589,0,46.295,0h11.011C59.043,0,60.582,1.122,61.114,2.777z"/>
+<g>
+	<path fill="#FFFFFF" d="M46.549,37.8L35.824,3.449C35.184,1.397,33.284,0,31.134,0c-2.617,0-4.774,2.05-4.907,4.664L24.918,30.34
+		c-0.046,0.911,0.064,1.824,0.326,2.699L31.065,52.5c0.507,1.693,2.065,2.854,3.832,2.854h5.411c1.742,0,3.283-1.126,3.812-2.785
+		l2.406-7.547C47.275,42.674,47.283,40.152,46.549,37.8z"/>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="28.4854" y1="30.5205" x2="39.9852" y2="27.5206" gradientTransform="matrix(1 0 0 -1 0 57)">
+		<stop  offset="0" style="stop-color:#000000;stop-opacity:0.25"/>
+		<stop  offset="0.9115" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M46.549,37.8L35.824,3.449C35.184,1.397,33.284,0,31.134,0c-2.617,0-4.774,2.05-4.907,4.664
+		L24.918,30.34c-0.046,0.911,0.064,1.824,0.326,2.699L31.065,52.5c0.507,1.693,2.065,2.854,3.832,2.854h5.411
+		c1.742,0,3.283-1.126,3.812-2.785l2.406-7.547C47.275,42.674,47.283,40.152,46.549,37.8z"/>
+</g>
+<path fill="#EF305E" d="M20.317,0h11.015c2.697,0,4.622,2.615,3.819,5.19L20.27,52.947c-0.521,1.672-2.068,2.811-3.819,2.811H5.436
+	c-2.697,0-4.621-2.615-3.819-5.19L16.498,2.81C17.019,1.139,18.566,0,20.317,0z"/>
+<text transform="matrix(1.0797 0 0 1 -17.166 80.5967)" font-family="'Calibri'" font-size="27.247">BREACKTS</text>
+</svg>
