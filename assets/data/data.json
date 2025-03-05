@@ -1,0 +1,85 @@
+{
+    "usuarios": [
+        { "id": 1, "nombre": "Carlos", "email": "carlos@email.com", "membresía": "premium", "img_perfil": "300-1.jpg" },
+        { "id": 2, "nombre": "Juan", "email": "juan@email.com", "membresía": "básica", "img_perfil": "300-3.jpg" },
+        { "id": 3, "nombre": "María", "email": "maria@email.com", "membresía": "premium", "img_perfil": "300-2.jpg" },
+        { "id": 4, "nombre": "Ana", "email": "ana@email.com", "membresía": "básica", "img_perfil": "300-4.jpg" },
+        { "id": 5, "nombre": "Luis", "email": "luis@email.com", "membresía": "premium", "img_perfil": "300-5.jpg" },
+        { "id": 6, "nombre": "Sofía", "email": "sofia@email.com", "membresía": "básica", "img_perfil": "300-6.jpg" },
+        { "id": 7, "nombre": "Pedro", "email": "pedro@email.com", "membresía": "premium", "img_perfil": "300-7.jpg" },
+        { "id": 8, "nombre": "Elena", "email": "elena@email.com", "membresía": "básica", "img_perfil": "300-8.jpg" },
+        { "id": 9, "nombre": "Diego", "email": "diego@email.com", "membresía": "premium", "img_perfil": "300-9.jpg" },
+        { "id": 10, "nombre": "Fernanda", "email": "fernanda@email.com", "membresía": "básica", "img_perfil": "300-10.jpg" }
+    ],
+    "amistades": [
+        { "id": 1, "usuario_solicitante": 1, "usuario_solicitado": 2, "estado": "aceptada", "fecha_solicitud": "2024-02-25T10:00:00Z" },
+        { "id": 2, "usuario_solicitante": 2, "usuario_solicitado": 3, "estado": "pendiente", "fecha_solicitud": "2024-02-25T11:00:00Z" },
+        { "id": 3, "usuario_solicitante": 3, "usuario_solicitado": 4, "estado": "rechazada", "fecha_solicitud": "2024-02-26T14:00:00Z" },
+        { "id": 4, "usuario_solicitante": 5, "usuario_solicitado": 1, "estado": "aceptada", "fecha_solicitud": "2024-02-27T15:30:00Z" }
+    ],
+    "eventos": [
+        { "id": 1, "nombre": "Concierto de Rock en Vivo", "categoria": "Evento", "descripcion": "Disfruta de una noche de rock con bandas en vivo.", "fecha": "2025-03-15", "ubicacion": "CDMX, Foro Sol", "img_evento": "concierto_rock.jpg" },
+        { "id": 2, "nombre": "Maratón Benéfico 10K", "categoria": "Charity", "descripcion": "Corre por una causa y apoya la lucha contra el cáncer.", "fecha": "2025-04-02", "ubicacion": "Parque Chapultepec, CDMX", "img_evento": "maraton_benefico.jpg" },
+        { "id": 3, "nombre": "Torneo de eSports: League of Legends", "categoria": "Gameplay", "descripcion": "Compite en un torneo profesional y gana premios increíbles.", "fecha": "2025-05-10", "ubicacion": "Centro de Convenciones, Monterrey", "img_evento": "torneo_esports.jpg" },
+        { "id": 4, "nombre": "Degustación de Café", "categoria": "Experience of the day", "descripcion": "Prueba diferentes tipos de café con baristas expertos.", "fecha": "2025-02-28", "ubicacion": "Café Aroma, Guadalajara", "img_evento": "degustacion_cafe.jpg" },
+        { "id": 5, "nombre": "Festival de Cine Independiente", "categoria": "Evento", "descripcion": "Proyección de películas de cineastas emergentes.", "fecha": "2025-06-20", "ubicacion": "Cineteca Nacional, CDMX", "img_evento": "festival_cine.jpg" },
+        { "id": 6, "nombre": "Cena Benéfica para Niños sin Hogar", "categoria": "Charity", "descripcion": "Una noche especial para recaudar fondos y brindar apoyo.", "fecha": "2025-07-05", "ubicacion": "Hotel Ritz, CDMX", "img_evento": "cena_benefica.jpg" },
+        { "id": 7, "nombre": "Lanzamiento de Videojuego Exclusivo", "categoria": "Gameplay", "descripcion": "Sé el primero en jugar el título más esperado del año.", "fecha": "2025-08-15", "ubicacion": "Game Center, Monterrey", "img_evento": "lanzamiento_juego.jpg" },
+        { "id": 8, "nombre": "Taller de Pintura al Aire Libre", "categoria": "Experience of the day", "descripcion": "Aprende técnicas de pintura con un paisaje inspirador.", "fecha": "2025-09-12", "ubicacion": "Bosque de Chapultepec, CDMX", "img_evento": "taller_pintura.jpg" },
+        { "id": 9, "nombre": "Festival de Música Electrónica", "categoria": "Evento", "descripcion": "Vive la mejor experiencia de música electrónica con DJs internacionales.", "fecha": "2025-10-03", "ubicacion": "Playa del Carmen", "img_evento": "festival_electronico.jpg" },
+        { "id": 10, "nombre": "Visita a un Santuario de Animales", "categoria": "Charity", "descripcion": "Conoce y ayuda a animales rescatados en un santuario natural.", "fecha": "2025-11-20", "ubicacion": "Reserva Ecológica, Oaxaca", "img_evento": "santuario_animales.jpg" },
+        { "id": 11, "nombre": "Concierto de Jazz", "fecha_inicio": "2024-03-10T20:00:00Z", "img_portada": "jazz.jpg", "descripcion": "Noche de jazz en vivo.", "usuario_creador": 1, "categoria": "Evento", "img_eventos": ["jazz1.jpg", "jazz2.jpg"], "invitados": [2, 3, 4] },
+        { "id": 12, "nombre": "Torneo de Ajedrez", "fecha_inicio": "2024-04-05T14:00:00Z", "img_portada": "ajedrez.jpg", "descripcion": "Competencia regional de ajedrez.", "usuario_creador": 3, "categoria": "Evento", "img_eventos": ["ajedrez1.jpg", "ajedrez2.jpg"], "invitados": [1, 5] }
+    ],
+    "productos": [
+        { "id": 1, "nombre": "Reloj", "precio": 120, "img_portada": "products/1.png", "descripcion": "Reloj clásico de acero inoxidable", "vendedor": 1, "categoria": "Accesorios", "img_productos": ["reloj1.jpg", "reloj2.jpg"], "stock": 10, "cantidad_vendida": 5, "fecha_creacion": "2024-02-15T10:00:00Z" },
+        { "id": 2, "nombre": "Audífonos", "precio": 50, "img_portada": "products/2.png", "descripcion": "Audífonos con cancelación de ruido", "vendedor": 2, "categoria": "Electrónica", "img_productos": ["audifonos1.jpg", "audifonos2.jpg"], "stock": 20, "cantidad_vendida": 8, "fecha_creacion": "2024-02-16T11:00:00Z" },
+        { "id": 3, "nombre": "Dron aéreo", "precio": 300, "img_portada": "products/3.png", "descripcion": "Dron con cámara HD y GPS", "vendedor": 3, "categoria": "Electrónica", "img_productos": ["dron1.jpg", "dron2.jpg"], "stock": 5, "cantidad_vendida": 2, "fecha_creacion": "2024-02-17T12:00:00Z" },
+        { "id": 4, "nombre": "Botella de vino", "precio": 25, "img_portada": "products/4.png", "descripcion": "Vino tinto reserva especial", "vendedor": 1, "categoria": "Bebidas", "img_productos": ["vino1.jpg", "vino2.jpg"], "stock": 15, "cantidad_vendida": 7, "fecha_creacion": "2024-02-18T13:00:00Z" },
+        { "id": 5, "nombre": "Botella de brandy", "precio": 40, "img_portada": "products/5.png", "descripcion": "Brandy añejo premium", "vendedor": 2, "categoria": "Bebidas", "img_productos": ["brandy1.jpg", "brandy2.jpg"], "stock": 12, "cantidad_vendida": 6, "fecha_creacion": "2024-02-19T14:00:00Z" },
+        { "id": 6, "nombre": "Chamarra blanca mujer", "precio": 80, "img_portada": "products/7.png", "descripcion": "Chamarra elegante para mujer", "vendedor": 3, "categoria": "Ropa", "img_productos": ["chamarra_blanca1.jpg", "chamarra_blanca2.jpg"], "stock": 10, "cantidad_vendida": 3, "fecha_creacion": "2024-02-20T15:00:00Z" },
+        { "id": 7, "nombre": "Chamarra negra hombre", "precio": 90, "img_portada": "products/8.png", "descripcion": "Chamarra de cuero para hombre", "vendedor": 1, "categoria": "Ropa", "img_productos": ["chamarra_negra1.jpg", "chamarra_negra2.jpg"], "stock": 8, "cantidad_vendida": 5, "fecha_creacion": "2024-02-21T16:00:00Z" },
+        { "id": 8, "nombre": "Tenis Nike", "precio": 120, "img_portada": "products/10.png", "descripcion": "Tenis deportivos de alta calidad", "vendedor": 2, "categoria": "Calzado", "img_productos": ["tenis_nike1.jpg", "tenis_nike2.jpg"], "stock": 20, "cantidad_vendida": 9, "fecha_creacion": "2024-02-22T17:00:00Z" },
+        { "id": 9, "nombre": "Vaporizador", "precio": 60, "img_portada": "products/17.png", "descripcion": "Vaporizador portátil de última generación", "vendedor": 3, "categoria": "Electrónica", "img_productos": ["vaporizador1.jpg", "vaporizador2.jpg"], "stock": 15, "cantidad_vendida": 6, "fecha_creacion": "2024-02-23T18:00:00Z" },
+        { "id": 10, "nombre": "Tetera", "precio": 35, "img_portada": "products/19.png", "descripcion": "Tetera de cerámica con infusor", "vendedor": 1, "categoria": "Hogar", "img_productos": ["tetera1.jpg", "tetera2.jpg"], "stock": 10, "cantidad_vendida": 4, "fecha_creacion": "2024-02-24T19:00:00Z" },
+        { "id": 11, "nombre": "Tapete de yoga", "precio": 45, "img_portada": "products/20.png", "descripcion": "Tapete antideslizante para yoga", "vendedor": 2, "categoria": "Deportes", "img_productos": ["tapete_yoga1.jpg", "tapete_yoga2.jpg"], "stock": 12, "cantidad_vendida": 5, "fecha_creacion": "2024-02-25T20:00:00Z" },
+        { "id": 12, "nombre": "Robot con ruedas a control remoto", "precio": 150, "img_portada": "products/22.png", "descripcion": "Robot inteligente con control remoto", "vendedor": 3, "categoria": "Juguetes", "img_productos": ["robot1.jpg", "robot2.jpg"], "stock": 7, "cantidad_vendida": 3, "fecha_creacion": "2024-02-26T21:00:00Z" },
+        { "id": 13, "nombre": "Audífonos wireless", "precio": 70, "img_portada": "products/15.png", "descripcion": "Audífonos inalámbricos con estuche de carga", "vendedor": 1, "categoria": "Electrónica", "img_productos": ["audifonos_wireless1.jpg", "audifonos_wireless2.jpg"], "stock": 18, "cantidad_vendida": 7, "fecha_creacion": "2024-02-27T22:00:00Z" },
+        { "id": 14, "nombre": "Reloj", "precio": 140, "img_portada": "products/1.png", "descripcion": "Reloj de lujo con correa de cuero", "vendedor": 2, "categoria": "Accesorios", "img_productos": ["reloj3.jpg", "reloj4.jpg"], "stock": 6, "cantidad_vendida": 2, "fecha_creacion": "2024-02-28T23:00:00Z" },
+        { "id": 15, "nombre": "Dron aéreo", "precio": 350, "img_portada": "products/3.png", "descripcion": "Dron profesional con cámara 4K", "vendedor": 3, "categoria": "Electrónica", "img_productos": ["dron3.jpg", "dron4.jpg"], "stock": 4, "cantidad_vendida": 1, "fecha_creacion": "2024-03-01T00:00:00Z" },
+        { "id": 16, "nombre": "Vaporizador", "precio": 80, "img_portada": "products/17.png", "descripcion": "Vaporizador de mesa con control digital", "vendedor": 1, "categoria": "Electrónica", "img_productos": ["vaporizador3.jpg", "vaporizador4.jpg"], "stock": 8, "cantidad_vendida": 4, "fecha_creacion": "2024-03-02T01:00:00Z" },
+        { "id": 17, "nombre": "Chamarra negra hombre", "precio": 95, "img_portada": "products/8.png", "descripcion": "Chamarra térmica para invierno", "vendedor": 2, "categoria": "Ropa", "img_productos": ["chamarra_negra3.jpg", "chamarra_negra4.jpg"], "stock": 7, "cantidad_vendida": 3, "fecha_creacion": "2024-03-03T02:00:00Z" },
+        { "id": 18, "nombre": "Camiseta Negra", "precio": 25.99, "img_portada": "products/1.png", "descripcion": "Camiseta 100% algodón.", "vendedor": 2, "categoria": "ropa", "img_productos": ["camiseta1.jpg", "camiseta2.jpg"], "stock": 50, "cantidad_vendida": 10, "fecha_creacion": "2024-02-20T14:00:00Z"},
+        { "id": 19, "nombre": "Libro de programación", "precio": 39.99, "img_portada": "products/1.png", "descripcion": "Guía avanzada sobre desarrollo web.", "vendedor": 4, "categoria": "libros", "img_productos": ["libro1.jpg", "libro2.jpg"], "stock": 30, "cantidad_vendida": 5, "fecha_creacion": "2024-01-10T09:00:00Z"}
+    ],
+    "reviews": [
+        { "id": 1, "autor": 2, "evento": 1, "calificacion": 5, "comentario": "¡Increíble experiencia!", "fecha": "2024-03-11T10:00:00Z" },
+        { "id": 2, "autor": 4, "evento": 2, "calificacion": 4, "comentario": "Buena organización.", "fecha": "2024-04-06T15:00:00Z" }
+    ],
+    "paginas": [
+        { "id": 1, "titulo": "Historia del Jazz", "contenido": "El jazz es un género musical...", "autor": 1, "fecha_creacion": "2024-02-15T08:30:00Z" },
+        { "id": 2, "titulo": "Estrategias de Ajedrez", "contenido": "Las aperturas más populares...", "autor": 3, "fecha_creacion": "2024-03-05T12:00:00Z" }
+    ],
+    "compras": [
+        { "id": 1, "usuario": 3, "producto": 1, "cantidad": 2, "precio_unitario": 25.99, "fecha": "2024-02-26T09:00:00Z" },
+        { "id": 2, "usuario": 5, "producto": 2, "cantidad": 1, "precio_unitario": 39.99, "fecha": "2024-02-28T16:30:00Z" }
+    ],
+    "stories": [
+        { "id": 1, "usuario": 1, "fecha": "2024-02-24T12:00:00Z", "img": "story1.jpg" },
+        { "id": 2, "usuario": 2, "fecha": "2024-02-25T18:45:00Z", "img": "story2.jpg" },
+        { "id": 3, "usuario": 3, "fecha": "2024-02-26T09:30:00Z", "img": "story3.jpg" },
+        { "id": 4, "usuario": 4, "fecha": "2024-02-27T14:15:00Z", "img": "story4.jpg" },
+        { "id": 5, "usuario": 5, "fecha": "2024-02-28T20:00:00Z", "img": "story5.jpg" },
+        { "id": 6, "usuario": 1, "fecha": "2024-02-28T22:10:00Z", "img": "story6.jpg" },
+        { "id": 7, "usuario": 2, "fecha": "2024-03-01T08:45:00Z", "img": "story7.jpg" },
+        { "id": 8, "usuario": 3, "fecha": "2024-03-02T10:00:00Z", "img": "story8.jpg" },
+        { "id": 9, "usuario": 4, "fecha": "2024-03-03T15:30:00Z", "img": "story9.jpg" },
+        { "id": 10, "usuario": 5, "fecha": "2024-03-04T19:00:00Z", "img": "story10.jpg" }
+    ],
+    "seguidores": [
+        { "id": 1, "usuario_seguidor": 3, "usuario_seguido": 1, "fecha": "2024-02-21T18:00:00Z" },
+        { "id": 2, "usuario_seguidor": 4, "usuario_seguido": 2, "fecha": "2024-02-22T12:30:00Z" },
+        { "id": 3, "usuario_seguidor": 5, "usuario_seguido": 3, "fecha": "2024-02-23T14:45:00Z" }
+    ]
+  }
+  

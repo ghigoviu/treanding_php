@@ -1,6 +1,28 @@
 <?php
-$title = "Perfil personal";
-include '../layouts/header.php';
+	// Leer el archivo JSON y decodificarlo
+	$data = json_decode(file_get_contents('../assets/data/data.json'), true);
+
+	// Suponiendo que el ID del usuario se pasa en la URL como parámetro (ejemplo: perfil.php?id=1)
+	$id_usuario = isset($_GET['id']) ? (int)$_GET['id'] : 1; // Aquí lo asignamos por defecto a 1 para evitar errores si no hay id
+
+	// Buscar el usuario en el array de usuarios
+	$usuario = null;
+	foreach ($data['usuarios'] as $user) {
+		if ($user['id'] === $id_usuario) {
+			$usuario = $user;
+			break;
+		}
+	}
+
+	// Verificar si el usuario existe
+	if (!$usuario) {
+		die('Usuario no encontrado');
+	}
+
+	// Aquí, ahora tienes todos los datos del usuario en la variable $usuario
+	$title = "Perfil " . $usuario['nombre'];
+	include '../layouts/header.php';
+
 ?>
 <!--begin::Wrapper-->
 <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
@@ -14,49 +36,9 @@ include '../layouts/header.php';
 				<div id="kt_app_content_container" class="app-container container-fluid">
 					<div class="d-flex flex-column flex-column-fluid">
 						<!-- Banner del perfil -->
-						<div class="profile-banner position-relative z-n1">
-							<div class="tns tns-default py-3" style="direction: ltr;">
-								<div data-tns="true"
-									data-tns-loop="true"
-									data-tns-swipe-angle="false"
-									data-tns-speed="2000"
-									data-tns-autoplay="false"
-									data-tns-controls="true"
-									data-tns-nav="false"
-									data-tns-mouse-drag="true"
-									data-tns-items="5"
-									data-tns-center="false"
-									data-tns-dots="false"
-									data-tns-prev-button="#kt_team_slider_prev1"
-									data-tns-next-button="#kt_team_slider_next1"
-									class="stories-line" >
+						<?php include_once "../includes/components/notif_seguidos.php" ?>
 
-									<?php
-									for ($i = 0; $i < 5; $i++) {
-										echo
-										'<div class="text-center px-2 py-1 min-w-90px min-h-90px mw-90px mh-90px">
-										<div class="symbol symbol-50 symbol-circle">
-											<div class="symbol-label position-relative" style="background-image:url(../assets/media/avatars/300-6.jpg)"></div>
-											<span class="w-15px h-15px position-absolute top-100 start-100 translate-middle  badge badge-circle badge-success">5</span>
-										</div>
-										<div class="fw-bold mt-2">Carla Miller</div>
-									</div>';
-									} ?>
-								</div>
-
-								<button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_prev1">
-									<span class="svg-icon fs-3x">
-										<i class="ki-solid ki-left fs-1"></i>
-									</span>
-								</button>
-
-								<button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_next1">
-									<span class="svg-icon fs-3x">
-										<i class="ki-solid ki-right fs-1"></i>
-									</span>
-								</button>
-							</div>
-						</div>
+						<div class="profile-banner position-relative z-n1"></div>
 						<!-- end::Banner del perfil -->
 					</div>
 					<!-- Sidebar -->
@@ -65,9 +47,8 @@ include '../layouts/header.php';
 							<div class="col-md-2">
 								<div class="d-flex flex-column flex-shrink-0 p-3 bg-light sidebar">
 									<div class="profile-card bg-white p-2 rounded shadow">
-										<img src="../public/img/profile-picture.jpg" class="rounded-circle profile-picture z-3" alt="Profile Picture">
-										<h4 class="mb-0">Steven Terrell</h4>
-										<p class="text-muted">@sterrell</p>
+                                        <img src="../assets/media/avatars/<?php echo $usuario['img_perfil']; ?>" class="rounded-circle profile-picture z-3" alt="Profile Picture">										<h4 class="mb-0"><?php echo $usuario['nombre']; ?></h4>
+										<p class="text-muted"><?php echo '@' . strtolower($usuario['nombre']); ?></p>
 										<div class="d-flex justify-content-center gap-4">
 											<div>
 												<p class="mb-0 fw-bold">46</p>
@@ -82,7 +63,9 @@ include '../layouts/header.php';
 												<small class="text-muted">Following</small>
 											</div>
 										</div>
-										<p class="mt-2 text-muted">My name is Steven, I'm a professional outdoor photographer based in Austria.</p>
+										<p class="mt-2 text-muted">My name is 
+											<?php echo($usuario['nombre']); ?>, 
+											I'm a professional outdoor photographer based in Austria.</p>
 										<button class="subscribe-btn">Subscribe</button>
 										<div class="mt-2">
 											<span class="badge bg-light text-dark">#mindfulness</span>

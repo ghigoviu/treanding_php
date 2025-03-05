@@ -17,6 +17,7 @@
 <script>
     var hostUrl = "../assets/";
 </script>
+
 <script src="../assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 <script src="../assets/plugins/global/plugins.bundle.js"></script>
 <script src="../assets/js/scripts.bundle.js"></script>
@@ -28,6 +29,11 @@
 <script src="../assets/js/custom/utilities/modals/create-app.js"></script>
 <script src="../assets/js/custom/utilities/modals/users-search.js"></script>
 <script src="../assets/js/custom/authentication/reset-password/reset-password.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="../assets/js/main.js"></script>
+
 </body>
 <!--end::Body-->
 

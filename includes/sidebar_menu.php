@@ -67,7 +67,7 @@
 
 						</div>
 					</div>
-						<!--begin:Menu sub Colaboraciones -->
+					<!--begin:Menu sub Colaboraciones -->
 					<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
 						<span class="menu-link">
 							<span class="menu-icon">
@@ -115,7 +115,7 @@
 
 						</div>
 					</div>
-						<!--begin:Menu sub Colaboraciones -->
+					<!--begin:Menu sub Colaboraciones -->
 					<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
 						<span class="menu-link">
 							<span class="menu-icon">
@@ -164,6 +164,25 @@
 						</div>
 						<!--end:Menu sub-->
 					</div>
+
+					<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+						<span class="menu-link">
+							<span class="menu-icon">
+								<i class="ki-duotone ki-calendar fs-2hx text-primary">
+									<span class="path1"></span>
+									<span class="path2"></span>
+									<span class="path3"></span>
+								</i>
+							</span>
+							<span class="menu-title">Calendario</span>
+							<span class="menu-arrow"></span>
+						</span>
+						<div class="menu-sub menu-sub-accordion">
+							<?php include_once '../includes/components/calendar.php' ?>
+						</div>
+						<!--end:Menu sub-->
+					</div>
+
 
 					<div class="separator separator-dashed my-5"></div>
 					<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
@@ -309,73 +328,6 @@
 								<!--end:Menu link-->
 							</div>
 							<!--end:Menu item-->
-
-						</div>
-						<!--end:Menu sub-->
-					</div>
-					<div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
-						<!--begin:Menu link-->
-						<span class="menu-link">
-							<span class="menu-icon">
-								<i class="ki-duotone ki-chart-pie-3 fs-2">
-									<span class="path1"></span>
-									<span class="path2"></span>
-									<span class="path3"></span>
-								</i>
-							</span>
-							<span class="menu-title">Estadisticas</span>
-							<span class="menu-arrow"></span>
-						</span>
-						<!--end:Menu link-->
-						<!--begin:Menu sub-->
-						<div class="menu-sub menu-sub-accordion menu-active-bg">
-							<!--begin:Menu item-->
-							<div class="menu-item">
-								<!--begin:Menu link-->
-								<a class="menu-link" href="#">
-									<span class="menu-bullet">
-										<span class="bullet bullet-dot"></span>
-									</span>
-									<span class="menu-title">Ver estadisticas</span>
-								</a>
-								<!--end:Menu link-->
-							</div>
-							<!--end:Menu item-->
-							<!--begin:Menu item-->
-
-						</div>
-						<!--end:Menu sub-->
-
-					</div>
-					<div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
-						<!--begin:Menu link-->
-						<span class="menu-link">
-							<span class="menu-icon">
-								<i class="ki-duotone ki-chart-pie-3 fs-2">
-									<span class="path1"></span>
-									<span class="path2"></span>
-									<span class="path3"></span>
-								</i>
-							</span>
-							<span class="menu-title">Eventos</span>
-							<span class="menu-arrow"></span>
-						</span>
-						<!--end:Menu link-->
-
-						<div class="menu-sub menu-sub-accordion menu-active-bg">
-							<!--begin:Menu item-->
-							<div class="menu-item">
-								<!--begin:Menu link-->
-								<a class="menu-link" href="#">
-									<span class="menu-bullet">
-										<span class="bullet bullet-dot"></span>
-									</span>
-									<span class="menu-title">Eventos</span>
-								</a>
-								<!--end:Menu link-->
-							</div>
-							<!--end:Menu item-->
-							<!--begin:Menu item-->
 
 						</div>
 						<!--end:Menu sub-->

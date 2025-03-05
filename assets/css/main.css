@@ -46,5 +46,25 @@
 .stories-line {
     background-color: white;
     border-radius: 10px;
-    
+}
+
+/* Carrusel */
+.slick-carousel {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.product-item {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.slick-prev, .slick-next {
+    z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: black; /* Cambia el color de las flechas si lo deseas */
 }
