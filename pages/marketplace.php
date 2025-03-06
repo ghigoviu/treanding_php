@@ -256,14 +256,14 @@ include '../layouts/header.php';
                             <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
                                 <?php include '../includes/components/product_card.php'; ?>
                             </div>
+                            
                             <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
-                                <?php include '../includes/components/product_card.php'; ?>
+                                <?php include '../includes/components/event_card.php' ?>
                             </div>
 
-                            <?php include '../includes/components/event_card.php' ?>
-
-                            <?php include '../includes/components/charity_card.php' ?>
-
+                            <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                <?php include '../includes/components/charity_card.php' ?>  
+                            </div>
                             <!--end::Row-->
                         </div>
                         <!--end::productos -->
