@@ -40,6 +40,11 @@ include '../layouts/header.php';
                                     <div class="card m-3 p-3">
                                         <h1><?php echo $event['title']; ?></h1>
                                         <h3><?php echo $event['date']; ?></h3>
+                                        <div class="mt-2">
+											<span class="badge bg-light text-dark">#mindfulness</span>
+                                            <span class="badge bg-light text-dark m-2">#education</span>
+                                            <span class="badge bg-light text-dark m-2">#hashtag</span>
+										</div>
                                     </div>
                                     <div class="container">
                                         <ul class="nav nav-tabs" id="eventTabs" role="tablist">

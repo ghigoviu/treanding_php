@@ -1,101 +1,27 @@
 <!-- Charity -->
+<?php
+    include 'egood_cardheader.php';
+?>
+
 <div class="card shadow-sm">
-    <div class="card-header px-3 py-1" id='charity'>
-        <div class="card-title py-0 m-0">
-            <!--begin::Avatar-->
-            <div class="symbol symbol-40px symbol-circle me-1">
-                <img alt="Pic" src="../assets/media/avatars/300-5.jpg">
-            </div>
-
-            <div class="d-flex justify-content-center flex-column me-1">
-                <a href="#" class="fs-7 fw-bold text-gray-900 text-hover-primary me-1 mb-1 lh-1">Brian Cox</a>
-                <!--begin::Info-->
-                <div class="mb-0 lh-1">
-                    <span class="badge badge-success badge-circle w-10px h-10px me-1"></span>
-                    <span class="fs-8 fw-semibold text-muted">Active</span>
-                </div>
-                <!--end::Info-->
-            </div>
-            <!--end::User-->
-        </div>
-
-        <div class="card-toolbar py-0 my-0">
-            <!--begin::Menu-->
-            <button class="btn btn-link btn-color-muted btn-active-color-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                <i class="fa-solid fa-ellipsis fs-3"></i>
-            </button>
-            <!--begin::Menu 3-->
-            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px py-3" data-kt-menu="true">
-                <!--begin::Heading-->
-                <div class="menu-item px-3">
-                    <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Contacts</div>
-                </div>
-                <!--end::Heading-->
-                <!--begin::Menu item-->
-                <div class="menu-item px-3">
-                    <a href="#" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_users_search">Add Contact</a>
-                </div>
-                <!--end::Menu item-->
-                <!--begin::Menu item-->
-                <div class="menu-item px-3">
-                    <a href="#" class="menu-link flex-stack px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_invite_friends">Invite Contacts
-                        <span class="ms-2" data-bs-toggle="tooltip" aria-label="Specify a contact email to send an invitation" data-bs-original-title="Specify a contact email to send an invitation" data-kt-initialized="1">
-                            <i class="ki-duotone ki-information fs-7">
-                                <span class="path1"></span>
-                                <span class="path2"></span>
-                                <span class="path3"></span>
-                            </i>
-                        </span></a>
-                </div>
-                <!--end::Menu item-->
-                <!--begin::Menu item-->
-                <div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-start">
-                    <a href="#" class="menu-link px-3">
-                        <span class="menu-title">Groups</span>
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <!--begin::Menu sub-->
-                    <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                        <!--begin::Menu item-->
-                        <div class="menu-item px-3">
-                            <a href="#" class="menu-link px-3" data-bs-toggle="tooltip" data-bs-original-title="Coming soon" data-kt-initialized="1">Create Group</a>
-                        </div>
-                        <!--end::Menu item-->
-                        <!--begin::Menu item-->
-                        <div class="menu-item px-3">
-                            <a href="#" class="menu-link px-3" data-bs-toggle="tooltip" data-bs-original-title="Coming soon" data-kt-initialized="1">Invite Members</a>
-                        </div>
-                        <!--end::Menu item-->
-                        <!--begin::Menu item-->
-                        <div class="menu-item px-3">
-                            <a href="#" class="menu-link px-3" data-bs-toggle="tooltip" data-bs-original-title="Coming soon" data-kt-initialized="1">Settings</a>
-                        </div>
-                        <!--end::Menu item-->
-                    </div>
-                    <!--end::Menu sub-->
-                </div>
-                <!--end::Menu item-->
-                <!--begin::Menu item-->
-                <div class="menu-item px-3 my-1">
-                    <a href="#" class="menu-link px-3" data-bs-toggle="tooltip" data-bs-original-title="Coming soon" data-kt-initialized="1">Settings</a>
-                </div>
-                <!--end::Menu item-->
-            </div>
-            <!--end::Menu 3-->
-        </div>
-        <!--end::Menu-->
-    </div>
-    <div class="position-relative">
-        <img src="../assets/media/books/3.png" class="card-img-top mt-2" alt="Producto" style="height: 220px;">
+    <?php headerUsuario(10) ?>
+    <div class="position-relative charity-info">
+        <img src="../assets/media/books/4.png" class="card-img-top" alt="Producto" style="height: 100%;">
         <span class="position-absolute top-0 start-0 bg-dark text-white p-1 small">00:00:00</span>
+        <div class="botones-charity-card">
+            <button class="btn-charity"><i class="bi bi-heart"></i></button>
+            <button class="btn-charity"><i class="bi bi-bookmark"></i></button>
+            <button class="btn-charity"><i class="bi bi-share"></i></button>
+        </div>
     </div>
+
     <div class="card-body p-2">
         <p class="fw-bold mb-1">Charity event</p>
         <div class="d-flex gap-2 mb-2">
-            <button class="btn btn-outline">$10</button>
-            <button class="btn btn-outline">$100</button>
-            <button class="btn btn-outline">$1,000</button>
-            <button class="btn btn-pink text-white w-100"><i class="bi bi-cart"></i></button>
+            <button class="btn btn-outline btn-sm">$10</button>
+            <button class="btn btn-outline btn-sm">$100</button>
+            <button class="btn btn-outline btn-sm">$1,000</button>
+            <button class="btn text-white btn-sm"><i class="bi bi-cart"></i></button>
         </div>
     </div>
 </div>

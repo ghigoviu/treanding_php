@@ -1,6 +1,7 @@
 <?php
 $title = "Marketplace";
 include '../layouts/header.php';
+include '../includes/components/product_card.php';
 ?>
 <!--begin::Wrapper-->
 <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
@@ -251,10 +252,10 @@ include '../layouts/header.php';
                         <!--begin::Row-->
                         <div class="row g-2 g-xl-4">
                             <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
-                                <?php include '../includes/components/product_card.php'; ?>
+                                <?php mostrarProducto(2) ?>
                             </div>
                             <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
-                                <?php include '../includes/components/product_card.php'; ?>
+                                <?php mostrarProducto(3) ?>
                             </div>
                             
                             <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">

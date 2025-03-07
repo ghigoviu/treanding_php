@@ -1,7 +1,7 @@
 // Slick Carousel
 $(document).ready(function(){
     $('.slick-carousel').slick({
-        slidesToShow: 5,  // Muestra 5 productos a la vez
+        slidesToShow: 4,  // Muestra 4 productos a la vez
         slidesToScroll: 1, // Desliza un producto a la vez
         arrows: true,      // Muestra las flechas
         dots: true,       // Opcional, muestra los puntos de navegación

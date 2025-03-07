@@ -68,3 +68,38 @@
 .slick-prev:before, .slick-next:before {
     color: black; /* Cambia el color de las flechas si lo deseas */
 }
+
+.charity-info {
+    position: relative;
+    width: 100%; /* Asegura que el div mantenga su tamaño */
+    height: 230px;
+    overflow: hidden;
+}
+
+.botones-charity-card {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.btn-charity {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con opacidad */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-charity:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
