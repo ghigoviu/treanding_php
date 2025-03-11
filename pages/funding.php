@@ -1,5 +1,6 @@
 <?php
 // Simulación de datos del evento
+include '../includes/components/charity_card.php';
 $event = [
     'title' => 'Charity Event',
     'date' => '7 OCT AT 07:00 - 11 OCT AT 12:00',
@@ -275,7 +276,7 @@ include '../layouts/header.php';
                                                     <!--begin:Author-->
                                                     <div class="flex-grow-1 me-2">
                                                         <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">Jacob Jones</a>
-                                                        <span class="text-muted fw-semibold d-block fs-7">Barone LLC.</span>
+                                                        <span class="text-muted fw-semibold d-block fs-7">41k seguidores</span>
                                                     </div>
                                                     <!--end:Author-->
                                                     <!--begin:Action-->
@@ -300,7 +301,7 @@ include '../layouts/header.php';
                                                     <!--begin:Author-->
                                                     <div class="flex-grow-1 me-2">
                                                         <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">Annette Black</a>
-                                                        <span class="text-muted fw-semibold d-block fs-7">Binford Ltd.</span>
+                                                        <span class="text-muted fw-semibold d-block fs-7">1.5k seguidores</span>
                                                     </div>
                                                     <!--end:Author-->
                                                     <!--begin:Action-->
@@ -325,7 +326,7 @@ include '../layouts/header.php';
                                                     <!--begin:Author-->
                                                     <div class="flex-grow-1 me-2">
                                                         <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">Devon Lane</a>
-                                                        <span class="text-muted fw-semibold d-block fs-7">Acme Co.</span>
+                                                        <span class="text-muted fw-semibold d-block fs-7">150 seguidores</span>
                                                     </div>
                                                     <!--end:Author-->
                                                     <!--begin:Action-->
@@ -362,7 +363,7 @@ include '../layouts/header.php';
                                                     <!--begin:Author-->
                                                     <div class="flex-grow-1 me-2">
                                                         <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">Jacob Jones</a>
-                                                        <span class="text-muted fw-semibold d-block fs-7">Barone LLC.</span>
+                                                        <span class="text-muted fw-semibold d-block fs-7">41 k seguidores</span>
                                                     </div>
                                                     <!--end:Author-->
                                                     <!--begin:Action-->
@@ -387,7 +388,7 @@ include '../layouts/header.php';
                                                     <!--begin:Author-->
                                                     <div class="flex-grow-1 me-2">
                                                         <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">Annette Black</a>
-                                                        <span class="text-muted fw-semibold d-block fs-7">Binford Ltd.</span>
+                                                        <span class="text-muted fw-semibold d-block fs-7">4.5 k seguidores</span>
                                                     </div>
                                                     <!--end:Author-->
                                                     <!--begin:Action-->
@@ -412,7 +413,7 @@ include '../layouts/header.php';
                                                     <!--begin:Author-->
                                                     <div class="flex-grow-1 me-2">
                                                         <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">Devon Lane</a>
-                                                        <span class="text-muted fw-semibold d-block fs-7">Acme Co.</span>
+                                                        <span class="text-muted fw-semibold d-block fs-7">150 seguidores</span>
                                                     </div>
                                                     <!--end:Author-->
                                                     <!--begin:Action-->
@@ -432,23 +433,35 @@ include '../layouts/header.php';
                                     <h4 class="fs-4 fw-bold">Eventos relacionados</h4>
                                     <!-- Carrusel de Slick -->
                                     <div class="slick-carousel">
-                                        <div class="product-item">
-                                            <?php include '../includes/components/charity_card.php'; ?>
+                                        <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                            <?php mostrarCharity(2); ?>
                                         </div>
-                                        <div class="product-item">
-                                            <?php include '../includes/components/charity_card.php'; ?>
+                                        <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                            <?php mostrarCharity(6); ?>
                                         </div>
-                                        <div class="product-item">
-                                            <?php include '../includes/components/charity_card.php'; ?>
+                                        <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                            <?php mostrarCharity(10); ?>
                                         </div>
-                                        <div class="product-item">
-                                            <?php include '../includes/components/charity_card.php'; ?>
+                                        <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                            <?php mostrarCharity(2); ?>
                                         </div>
-                                        <div class="product-item">
-                                            <?php include '../includes/components/charity_card.php'; ?>
+                                        <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                            <?php mostrarCharity(6); ?>
                                         </div>
-                                        <div class="product-item">
-                                            <?php include '../includes/components/charity_card.php'; ?>
+                                        <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                            <?php mostrarCharity(10); ?>
+                                        </div>
+                                        <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                            <?php mostrarCharity(2); ?>
+                                        </div>
+                                        <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                            <?php mostrarCharity(6); ?>
+                                        </div>
+                                        <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                            <?php mostrarCharity(10); ?>
+                                        </div>
+                                        <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                            <?php mostrarCharity(2); ?>
                                         </div>
                                     </div>
                                     <!-- End: Carousel de productos relacionados -->

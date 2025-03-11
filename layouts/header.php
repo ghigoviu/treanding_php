@@ -10,6 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="canonical" href="http://preview.keenthemes.compages/faq/extended.html" />
     <link rel="shortcut icon" href="./assets/media/logos/favicon.ico" />
+    <!-- Incluye los archivos CSS y JS de Slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!--begin::Fonts(mandatory for all pages)-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
     <!--end::Fonts-->
@@ -19,12 +23,9 @@
     <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
     <link href="../assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/css/main.css" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
-    <!-- Incluye los archivos CSS y JS de Slick -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Incluye los archivos CSS de estilos personalizados -->
+    <link href="../assets/css/main.css" rel="stylesheet" type="text/css" />
 
 </head>
 <!--end::Head-->
