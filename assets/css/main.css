@@ -47,14 +47,12 @@
     background-color: white;
     border-radius: 10px;
 }
-
 /* Carrusel */
 .slick-carousel {
     display: flex;
     justify-content: space-between;
     margin: 10px;
 }
-
 .slick-prev {
     width: 50px;
     height: 50px;
@@ -65,30 +63,25 @@
     height: 50px;
     font-size: 50px;
 }
-
 .slick-next::before {
-    font-size: 50px;
+    font-size: 40px;
     color: black;
 }
-
 .slick-prev::before {
-    font-size: 50px;
+    font-size: 40px;
     color: black;
 }
-
 .product-item {
     width: 100%;
     margin-left: 10px;
     margin-right: 10px;
 }
-
 .charity-info {
     position: relative;
-    width: 100%; /* Asegura que el div mantenga su tamaño */
+    width: 100%; 
     height: 230px;
     overflow: hidden;
 }
-
 .botones-charity-card {
     position: absolute;
     bottom: 10px;
@@ -97,7 +90,6 @@
     flex-direction: column;
     gap: 5px;
 }
-
 .btn-charity {
     width: 30px;
     height: 30px;
@@ -112,7 +104,6 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 .btn-charity:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }

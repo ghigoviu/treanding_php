@@ -1,6 +1,7 @@
 <?php
 $title = "Detalle producto";
 include '../layouts/header.php';
+include '../includes/components/product_card.php';
 ?>
 <!--begin::Wrapper-->
 <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
@@ -551,23 +552,30 @@ include '../layouts/header.php';
                             <!-- Carrusel de Slick -->
                             <div class="slick-carousel">
                                 <div class="product-item">
-                                    <?php include '../includes/components/product_card.php'; ?>
+                                    <?php mostrarProducto(5); ?>
                                 </div>
                                 <div class="product-item">
-                                    <?php include '../includes/components/product_card.php'; ?>
+                                    <?php mostrarProducto(6); ?>
                                 </div>
                                 <div class="product-item">
-                                    <?php include '../includes/components/product_card.php'; ?>
+                                    <?php mostrarProducto(7); ?>
                                 </div>
                                 <div class="product-item">
-                                    <?php include '../includes/components/product_card.php'; ?>
+                                    <?php mostrarProducto(8); ?>
                                 </div>
                                 <div class="product-item">
-                                    <?php include '../includes/components/product_card.php'; ?>
+                                    <?php mostrarProducto(9); ?>
                                 </div>
                                 <div class="product-item">
-                                    <?php include '../includes/components/product_card.php'; ?>
+                                    <?php mostrarProducto(10); ?>
                                 </div>
+                                <div class="product-item">
+                                    <?php mostrarProducto(11); ?>
+                                </div>
+                                <div class="product-item">
+                                    <?php mostrarProducto(12); ?>
+                                </div>
+                                
                                 <!-- Agrega más productos si es necesario -->
                             </div>
                         </div>
