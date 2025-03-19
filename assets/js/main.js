@@ -92,3 +92,42 @@ $(document).ready(function() {
         $(this).closest(".user-entry").remove();
     });
 });
+
+// Drag and Drop functionality
+document.addEventListener("DOMContentLoaded", function () {
+    const dropZone = document.getElementById("drop-zone");
+    const fileInput = document.getElementById("file-input");
+    
+    dropZone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZone.classList.add("drag-over");
+    });
+
+    dropZone.addEventListener("dragleave", () => {
+        dropZone.classList.remove("drag-over");
+    });
+
+    dropZone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropZone.classList.remove("drag-over");
+        
+        const files = e.dataTransfer.files;
+        fileInput.files = files; // Asignar archivos al input
+    });
+
+    dropZone.addEventListener("click", () => fileInput.click());
+
+    fileInput.addEventListener("change", () => {
+        console.log("Files selected:", fileInput.files);
+    });
+
+    // Discount Button Toggle Functionality
+    const discountButtons = document.querySelectorAll(".discount-btn");
+    
+    discountButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            discountButtons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+        });
+    });
+});
