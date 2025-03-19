@@ -107,3 +107,36 @@
 .btn-charity:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* Estilo para centrar los botones horizontalmente */
+.botones-container {
+    display: flex;
+    justify-content: center;  /* Centra los botones horizontalmente */
+    gap: 10px;                /* Espacio entre los botones */
+}
+
+/* Estilo inicial para los botones */
+.btn-outline {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: black;  /* Color del texto por defecto */
+    border: 1px solid #007bff; /* Bordes de color azul */
+}
+
+/* Estilo para el botón activado */
+.btn-activo {
+    background-color: #70a7ff; /* Azul claro */
+    color: white; /* Texto blanco */
+}
+
+/* Estilos opcionales para mejorar la visibilidad de los botones */
+.btn-outline:hover {
+    background-color: #b3d4ff; /* Azul claro en hover */
+    color: white;
+}
+
+/* Estilo para el botón del carrito cuando está activo */
+.btn-cart.activo-cart i {
+    color: black; /* Cambiar color del ícono del carrito a negro */
+}

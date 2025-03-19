@@ -1,7 +1,7 @@
 <?php
-    $title = "Nuevo producto";
-    include '../layouts/header.php';
-    include '../includes/components/product_card.php';
+$title = "Nuevo producto";
+include '../layouts/header.php';
+include '../includes/components/product_card.php';
 ?>
 
 <!--begin::Wrapper-->
@@ -29,205 +29,134 @@
                             <!--begin::Form-->
                             <form id="kt_account_profile_details_form" class="form">
                                 <!--begin::Card body-->
-                                <div class="card-body border-top p-9">
-                                    <!--begin::Input group-->
+                                <div class="card-body border-top p-9 mb-6">
+                                    <!-- Imagen - Thumbnail -->
                                     <div class="row mb-6">
-                                        <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">Avatar</label>
-                                        <!--end::Label-->
-                                        <!--begin::Col-->
+                                        <label class="col-lg-3 col-form-label fw-semibold fs-6">Thumbnail</label>
                                         <div class="col-lg-8">
-                                            <!--begin::Image input-->
                                             <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('assets/media/svg/avatars/blank.svg')">
-                                                <!--begin::Preview existing avatar-->
                                                 <div class="image-input-wrapper w-125px h-125px" style="background-image: url(assets/media/avatars/300-1.jpg)"></div>
-                                                <!--end::Preview existing avatar-->
-                                                <!--begin::Label-->
                                                 <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
-                                                    <i class="ki-duotone ki-pencil fs-7">
-                                                        <span class="path1"></span>
-                                                        <span class="path2"></span>
-                                                    </i>
-                                                    <!--begin::Inputs-->
+                                                    <i class="ki-duotone ki-pencil fs-7"></i>
                                                     <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
                                                     <input type="hidden" name="avatar_remove" />
-                                                    <!--end::Inputs-->
                                                 </label>
-                                                <!--end::Label-->
-                                                <!--begin::Cancel-->
                                                 <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
-                                                    <i class="ki-duotone ki-cross fs-2">
-                                                        <span class="path1"></span>
-                                                        <span class="path2"></span>
-                                                    </i>
+                                                    <i class="ki-duotone ki-cross fs-2"></i>
                                                 </span>
-                                                <!--end::Cancel-->
-                                                <!--begin::Remove-->
                                                 <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
-                                                    <i class="ki-duotone ki-cross fs-2">
-                                                        <span class="path1"></span>
-                                                        <span class="path2"></span>
-                                                    </i>
+                                                    <i class="ki-duotone ki-cross fs-2"></i>
                                                 </span>
-                                                <!--end::Remove-->
                                             </div>
-                                            <!--end::Image input-->
-                                            <!--begin::Hint-->
                                             <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
-                                            <!--end::Hint-->
                                         </div>
-                                        <!--end::Col-->
                                     </div>
-                                    <!--end::Input group-->
-                                    <!--begin::Input group-->
+
+                                    <!-- Nombre del producto -->
                                     <div class="row mb-6">
-                                        <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Full Name</label>
-                                        <!--end::Label-->
-                                        <!--begin::Col-->
+                                        <label class="col-lg-3 col-form-label required fw-semibold fs-6">Nombre de producto</label>
                                         <div class="col-lg-8">
-                                            <!--begin::Row-->
-                                            <div class="row">
-                                                <!--begin::Col-->
-                                                <div class="col-lg-6 fv-row">
-                                                    <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" value="Max" />
+                                            <input type="text" name="pname" class="form-control form-control-lg form-control-solid" placeholder="Nombre del producto" />
+                                        </div>
+                                    </div>
+
+                                    <!-- Descripción -->
+                                    <div class="row mb-6">
+                                        <label class="col-lg-3 col-form-label required fw-semibold fs-6">Descripción</label>
+                                        <div class="col-lg-8">
+                                            <input type="text" name="description" class="form-control form-control-lg form-control-solid" placeholder="Descripción del producto" />
+                                        </div>
+                                    </div>
+
+                                    <!-- Drag and Drop de imágenes -->
+                                    <div class="row mb-6">
+                                        <label class="col-lg-3 col-form-label fw-semibold fs-6">Media</label>
+                                        <div class="col-lg-8">
+                                            <div class="dropzone border-dashed p-5 text-center" style="border-color: #009ef7; background-color: #f1faff;">
+                                                <p class="text-primary fw-bold">Drop files here or click to upload.</p>
+                                                <p class="text-muted">Upload up to 10 files</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Sección de precios -->
+                                    <div class="border-top pt-6 mt-6">
+                                        <h4 class="mb-4">Pricing</h4>
+                                        <div class="row mb-6">
+                                            <label class="col-lg-3 col-form-label required fw-semibold fs-6">Base Price</label>
+                                            <div class="col-lg-8">
+                                                <input type="text" name="base_price" class="form-control form-control-lg form-control-solid" placeholder="Product price" />
+                                            </div>
+                                        </div>
+
+                                        <!-- Tipo de Descuento -->
+                                        <div class="row mb-6">
+                                            <label class="col-lg-3 col-form-label fw-semibold fs-6">Discount Type</label>
+                                            <div class="col-lg-8 d-flex gap-3">
+                                                <button type="button" class="btn btn-outline-primary active">No Discount</button>
+                                                <button type="button" class="btn btn-outline-primary">Percentage %</button>
+                                                <button type="button" class="btn btn-outline-primary">Fixed Price</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Clase de Impuesto e IVA -->
+                                        <div class="row mb-6">
+                                            <label class="col-lg-3 col-form-label required fw-semibold fs-6">Tax Class</label>
+                                            <div class="col-lg-4">
+                                                <select class="form-select form-select-lg form-control-solid">
+                                                    <option>Select an option</option>
+                                                    <option>Standard</option>
+                                                    <option>Reduced</option>
+                                                </select>
+                                            </div>
+                                            <label class="col-lg-2 col-form-label fw-semibold fs-6">VAT Amount (%)</label>
+                                            <div class="col-lg-2">
+                                                <input type="text" name="vat_amount" class="form-control form-control-lg form-control-solid" placeholder="%" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!--end::Card body-->
+                                <div class="card-body border-top p-9 mb-6">
+                                    <div class="row mb-6">
+                                        <label class="col-lg-12 col-form-label fw-semibold fs-6"><strong>Team Up</strong> - make this product a collaboration</label>
+                                        <div class="col-12">
+                                            <div id="user-list">
+                                                <!-- Usuario base -->
+                                                <div class="d-flex align-items-center border p-2 mb-2 user-entry">
+                                                    <input type="text" class="form-control me-2" placeholder="Users name">
+                                                    <select class="form-select me-2">
+                                                        <option selected>Rol</option>
+                                                        <option>Supplier</option>
+                                                        <option>Partner</option>
+                                                    </select>
+                                                    <input type="text" class="form-control me-2" placeholder="%">
+                                                    <button class="btn btn-outline-primary me-2"><i class="bi bi-pencil"></i></button>
+                                                    <button class="btn btn-outline-danger remove-user"><i class="bi bi-x-circle"></i></button>
                                                 </div>
-                                                <!--end::Col-->
-                                                <!--begin::Col-->
-                                                <div class="col-lg-6 fv-row">
-                                                    <input type="text" name="lname" class="form-control form-control-lg form-control-solid" placeholder="Last name" value="Smith" />
-                                                </div>
-                                                <!--end::Col-->
                                             </div>
-                                            <!--end::Row-->
-                                        </div>
-                                        <!--end::Col-->
-                                    </div>
-                                    <!--end::Input group-->
-                                    <!--begin::Input group-->
-                                    <div class="row mb-6">
-                                        <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Company</label>
-                                        <!--end::Label-->
-                                        <!--begin::Col-->
-                                        <div class="col-lg-8 fv-row">
-                                            <input type="text" name="company" class="form-control form-control-lg form-control-solid" placeholder="Company name" value="Keenthemes" />
-                                        </div>
-                                        <!--end::Col-->
-                                    </div>
-                                    <!--end::Input group-->
-                                    <!--begin::Input group-->
-                                    <div class="row mb-6">
-                                        <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">
-                                            <span class="required">Contact Phone</span>
-                                            <span class="ms-1" data-bs-toggle="tooltip" title="Phone number must be active">
-                                                <i class="ki-duotone ki-information-5 text-gray-500 fs-6">
-                                                    <span class="path1"></span>
-                                                    <span class="path2"></span>
-                                                    <span class="path3"></span>
-                                                </i>
-                                            </span>
-                                        </label>
-                                        <!--end::Label-->
-                                        <!--begin::Col-->
-                                        <div class="col-lg-8 fv-row">
-                                            <input type="tel" name="phone" class="form-control form-control-lg form-control-solid" placeholder="Phone number" value="044 3276 454 935" />
-                                        </div>
-                                        <!--end::Col-->
-                                    </div>
-                                    <!--end::Input group-->
-                                    <!--begin::Input group-->
-                                    <div class="row mb-6">
-                                        <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">Company Site</label>
-                                        <!--end::Label-->
-                                        <!--begin::Col-->
-                                        <div class="col-lg-8 fv-row">
-                                            <input type="text" name="website" class="form-control form-control-lg form-control-solid" placeholder="Company website" value="keenthemes.com" />
-                                        </div>
-                                        <!--end::Col-->
-                                    </div>
-                                    <!--end::Input group-->
-                                    <!--begin::Input group-->
-                                    <div class="row mb-6">
-                                        <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">Currency</label>
-                                        <!--end::Label-->
-                                        <!--begin::Col-->
-                                        <div class="col-lg-8 fv-row">
-                                            <select name="currnecy" aria-label="Select a Currency" data-control="select2" data-placeholder="Select a currency.." class="form-select form-select-solid form-select-lg">
-                                                <option value="">Select a currency..</option>
-                                                <option data-kt-flag="flags/united-states.svg" value="USD">
-                                                    <b>USD</b>&nbsp;-&nbsp;USA dollar
-                                                </option>
-                                                <option data-kt-flag="flags/united-kingdom.svg" value="GBP">
-                                                    <b>GBP</b>&nbsp;-&nbsp;British pound
-                                                </option>
-                                                <option data-kt-flag="flags/australia.svg" value="AUD">
-                                                    <b>AUD</b>&nbsp;-&nbsp;Australian dollar
-                                                </option>
-                                                <option data-kt-flag="flags/japan.svg" value="JPY">
-                                                    <b>JPY</b>&nbsp;-&nbsp;Japanese yen
-                                                </option>
-                                                <option data-kt-flag="flags/sweden.svg" value="SEK">
-                                                    <b>SEK</b>&nbsp;-&nbsp;Swedish krona
-                                                </option>
-                                                <option data-kt-flag="flags/canada.svg" value="CAD">
-                                                    <b>CAD</b>&nbsp;-&nbsp;Canadian dollar
-                                                </option>
-                                                <option data-kt-flag="flags/switzerland.svg" value="CHF">
-                                                    <b>CHF</b>&nbsp;-&nbsp;Swiss franc
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <!--end::Col-->
-                                    </div>
-                                    <!--end::Input group-->
-                                    <!--begin::Input group-->
-                                    <div class="row mb-6">
-                                        <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Communication</label>
-                                        <!--end::Label-->
-                                        <!--begin::Col-->
-                                        <div class="col-lg-8 fv-row">
-                                            <!--begin::Options-->
-                                            <div class="d-flex align-items-center mt-3">
-                                                <!--begin::Option-->
-                                                <label class="form-check form-check-custom form-check-inline form-check-solid me-5">
-                                                    <input class="form-check-input" name="communication[]" type="checkbox" value="1" />
-                                                    <span class="fw-semibold ps-2 fs-6">Email</span>
-                                                </label>
-                                                <!--end::Option-->
-                                                <!--begin::Option-->
-                                                <label class="form-check form-check-custom form-check-inline form-check-solid">
-                                                    <input class="form-check-input" name="communication[]" type="checkbox" value="2" />
-                                                    <span class="fw-semibold ps-2 fs-6">Phone</span>
-                                                </label>
-                                                <!--end::Option-->
+
+                                            <!-- Botón Add More -->
+                                            <div class="text-center mt-2">
+                                                <a href="#" id="add-more" class="text-decoration-underline">Add more</a>
                                             </div>
-                                            <!--end::Options-->
+
+                                            <hr>
+
+                                            <!-- Advertencias -->
+                                            <p class="text-danger small">
+                                                *Warning: Reviews, returns, reports and bad experiences regarding the sale will also be shared. <br>
+                                                *Notification will be sent to each user before publishing the product. <br>
+                                                Until all users accept, the product will be published.
+                                            </p>
                                         </div>
-                                        <!--end::Col-->
                                     </div>
-                                    <!--end::Input group-->
-                                    <!--begin::Input group-->
-                                    <div class="row mb-0">
-                                        <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">Allow Marketing</label>
-                                        <!--begin::Label-->
-                                        <!--begin::Label-->
-                                        <div class="col-lg-8 d-flex align-items-center">
-                                            <div class="form-check form-check-solid form-switch form-check-custom fv-row">
-                                                <input class="form-check-input w-45px h-30px" type="checkbox" id="allowmarketing" checked="checked" />
-                                                <label class="form-check-label" for="allowmarketing"></label>
-                                            </div>
-                                        </div>
-                                        <!--begin::Label-->
-                                    </div>
-                                    <!--end::Input group-->
+
                                 </div>
                                 <!--end::Card body-->
+
                                 <!--begin::Actions-->
                                 <div class="card-footer d-flex justify-content-end py-6 px-9">
                                     <button type="reset" class="btn btn-light btn-active-light-primary me-2">Discard</button>

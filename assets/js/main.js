@@ -32,3 +32,63 @@ $(document).ready(function(){
     });
 });
 
+// Obtener todos los botones con la clase .btn-outline
+const botones = document.querySelectorAll('.btn-outline');
+
+// Función para manejar el cambio de color y activación de botones
+botones.forEach(boton => {
+    boton.addEventListener('click', function() {
+        // Primero, desactivar todos los botones
+        botones.forEach(b => {
+            b.classList.remove('btn-activo'); // Remover la clase de activación
+            b.style.backgroundColor = '';     // Limpiar el color de fondo
+            b.style.color = 'black';           // Restaurar el color de texto
+        });
+
+        // Activar el botón clickeado
+        if (!boton.classList.contains('btn-activo')) {
+            boton.classList.add('btn-activo');  // Añadir la clase para color de fondo
+        }
+    });
+});
+
+// Manejo del botón del carrito en instancias repetidas
+const btnCarritos = document.querySelectorAll('.btn-cart'); // Seleccionamos todos los botones de carrito
+
+btnCarritos.forEach(btnCart => {
+    btnCart.addEventListener('click', function() {
+        // Cambiar color del botón del carrito cuando se hace clic
+        if (!btnCart.classList.contains('activo-cart')) {
+            btnCart.classList.add('activo-cart');  // Añadir la clase activa para cambiar el color del ícono
+            btnCart.style.backgroundColor = '#70a7ff';  // Fondo azul claro
+            btnCart.style.color = 'white';  // Texto blanco
+        } else {
+            btnCart.classList.remove('activo-cart');  // Remover la clase activa para desactivar
+            btnCart.style.backgroundColor = '';  // Limpiar fondo
+            btnCart.style.color = 'black';  // Volver texto negro
+        }
+    });
+});
+
+// Agregar usuarios a la colaboración.
+$(document).ready(function() {
+    $("#add-more").click(function(e) {
+        e.preventDefault();
+        let newUser = `<div class="d-flex align-items-center border p-2 mb-2 user-entry">
+            <input type="text" class="form-control me-2" placeholder="Users name">
+            <select class="form-select me-2">
+                <option selected>Rol</option>
+                <option>Supplier</option>
+                <option>Partner</option>
+            </select>
+            <input type="text" class="form-control me-2" placeholder="%">
+            <button class="btn btn-outline-primary me-2"><i class="bi bi-pencil"></i></button>
+            <button class="btn btn-outline-danger remove-user"><i class="bi bi-x-circle"></i></button>
+        </div>`;
+        $("#user-list").append(newUser);
+    });
+
+    $(document).on("click", ".remove-user", function() {
+        $(this).closest(".user-entry").remove();
+    });
+});

@@ -20,10 +20,9 @@ function mostrarProducto($id){
 
 <div class="card shadow-sm">
     <?php headerUsuario($producto['vendedor']) ?>
-
     <div class="position-relative">
         <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover">
-            <img src="../assets/media/<?php echo htmlspecialchars($producto['img_portada']); ?>" class="card-img-top mt-2" alt="Producto" style="height: 200px;">
+            <img src="../assets/media/<?php echo htmlspecialchars($producto['img_portada']); ?>" class="card-img-top" alt="Producto" style="height: 200px;">
         </div>
     </div>
     <div class="card-footer px-3 py-4">
