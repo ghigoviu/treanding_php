@@ -26,10 +26,10 @@ function mostrarCharity($id)
                 <img src="<?php echo htmlspecialchars($evento['img_evento']); ?>" class="card-img-top" alt="Portada" style="height: 200px;">
             </div>
             <span class="position-absolute top-0 start-0 bg-dark text-white p-1 small">00:00:00</span>
-            <div class="botones-charity-card">
-                <button class="btn-charity"><i class="bi bi-heart"></i></button>
-                <button class="btn-charity"><i class="bi bi-bookmark"></i></button>
-                <button class="btn-charity"><i class="bi bi-share"></i></button>
+            <div class="botones-reaction-card">
+                <button class="btn-reaction"><i class="bi bi-heart"></i></button>
+                <button class="btn-reaction"><i class="bi bi-bookmark"></i></button>
+                <button class="btn-reaction"><i class="bi bi-share"></i></button>
             </div>
         </div>
 

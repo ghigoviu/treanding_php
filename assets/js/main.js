@@ -131,3 +131,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleccionar todos los botones con la clase '.btn-reaction'
+    const botones = document.querySelectorAll('.btn-reaction');
+
+    // Añadir un evento de clic a cada botón
+    botones.forEach(function(boton) {
+        boton.addEventListener('click', function() {
+            // Alternar la clase 'active' en el botón clickeado
+            boton.classList.toggle('active');
+        });
+    });
+});

@@ -82,7 +82,7 @@
     height: 230px;
     overflow: hidden;
 }
-.botones-charity-card {
+.botones-reaction-card {
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -90,7 +90,7 @@
     flex-direction: column;
     gap: 5px;
 }
-.btn-charity {
+.btn-reaction {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -104,8 +104,13 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-.btn-charity:hover {
+.btn-reaction:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.btn-reaction.active {
+    background-color: #007bff; /* Azul brillante */
+    color: white; /* Color blanco para el icono */
 }
 
 /* Estilo para centrar los botones horizontalmente */

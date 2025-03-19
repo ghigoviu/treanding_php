@@ -281,11 +281,11 @@
 							<!--begin:Menu item-->
 							<div class="menu-item">
 								<!--begin:Menu link-->
-								<a class="menu-link" href="#">
+								<a class="menu-link" href="nuevo_producto.php">
 									<span class="menu-bullet">
 										<span class="bullet bullet-dot"></span>
 									</span>
-									<span class="menu-title">Ver/ Crear productos</span>
+									<span class="menu-title">Crear productos</span>
 								</a>
 								<!--end:Menu link-->
 							</div>
