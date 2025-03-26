@@ -188,3 +188,10 @@
     min-width: 100px;
     text-align: center;
 }
+
+.capa-censura {
+    background: rgba(50, 50, 50, 0.5);
+    backdrop-filter: blur(15px);
+    text-align: center;
+    padding: 20px;
+}

@@ -169,5 +169,15 @@ function startCountdown(targetDate) {
 
 // Configurar cuenta regresiva a 5 horas desde ahora
 const countdownEndDate = new Date();
-countdownEndDate.setHours(countdownEndDate.getHours() + 5.5);
+countdownEndDate.setHours(countdownEndDate.getHours() + 5);
 startCountdown(countdownEndDate);
+
+function ocultarCensura(boton, acceso) {
+    if (acceso) {
+        let capa = boton.closest(".capa-censura");
+        if (capa) {
+            alert(capa);
+            capa.remove(); // 💥 Esto elimina la censura completamente
+        }
+    }
+}
