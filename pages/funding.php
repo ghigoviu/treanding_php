@@ -33,8 +33,8 @@ include '../layouts/header.php';
 
                     <div class="container-fluid">
                         <div class="card">
-                            <div class="card-header text-center bg-primary text-white" style=" position: relative; background-image: url(../public/img/funding-event.jpg); height:550px">
-
+                            <div class="card-header text-center bg-primary text-white" style="position: relative; background-image: url(../public/img/funding-event.jpg); height:550px">
+                                <div id="countdown-timer" class="countdown-timer"></div>
                             </div>
                             <div class="row p-3">
                                 <div class="col-lg-7">
@@ -42,10 +42,10 @@ include '../layouts/header.php';
                                         <h1><?php echo $event['title']; ?></h1>
                                         <h3><?php echo $event['date']; ?></h3>
                                         <div class="mt-2">
-											<span class="badge bg-light text-dark">#mindfulness</span>
+                                            <span class="badge bg-light text-dark">#mindfulness</span>
                                             <span class="badge bg-light text-dark m-2">#education</span>
                                             <span class="badge bg-light text-dark m-2">#hashtag</span>
-										</div>
+                                        </div>
                                     </div>
                                     <div class="container">
                                         <ul class="nav nav-tabs" id="eventTabs" role="tablist">
@@ -123,7 +123,47 @@ include '../layouts/header.php';
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-5">
+                                    <div class="donation-card p-3 shadow-sm border-0 rounded-3 mt-5">
+                                        <div class="d-flex gap-2 flex-wrap">
+                                            <button class="btn btn-light donation-btn" data-amount="$10">
+                                                <span class="emoji">😊</span>
+                                                <span class="amount">$10</span>
+                                            </button>
+                                            <button class="btn btn-light donation-btn" data-amount="$100">
+                                                <span class="emoji">😁</span>
+                                                <span class="amount">$100</span>
+                                            </button>
+                                            <button class="btn btn-light donation-btn" data-amount="$1000">
+                                                <span class="emoji">😢</span>
+                                                <span class="amount">$1000</span>
+                                            </button>
+                                            <button class="btn btn-light donation-btn" data-amount="$5000">
+                                                <span class="emoji">😍</span>
+                                                <span class="amount">$5000</span>
+                                            </button>
+                                            <button class="btn btn-light donation-btn" data-amount="$8000">
+                                                <span class="emoji">🥰</span>
+                                                <span class="amount">$8000</span>
+                                            </button>
+                                            <button class="btn btn-light donation-btn" data-amount="$10000">
+                                                <span class="emoji">😆</span>
+                                                <span class="amount">$10000</span>
+                                            </button>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 mt-2">
+                                            <button id="like-btn" class="btn btn-outline-secondary">
+                                                <i class="bi bi-heart"></i>
+                                            </button>
+                                            <input type="text" class="form-control" placeholder="$ other">
+                                            <select class="form-select">
+                                                <option>USD</option>
+                                            </select>
+                                            <button class="btn btn-dark">Check out</button>
+                                            <button class="btn btn-light">...</button>
+                                        </div>
+                                    </div>
+
                                     <div class="card p-3 shadow-sm border-0 rounded-3 mt-5">
                                         <h5 class="fw-bold mb-3">Status</h5>
 

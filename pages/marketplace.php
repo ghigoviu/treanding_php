@@ -20,11 +20,7 @@ include '../includes/components/charity_card.php';
                 <!--begin::Content container-->
                 <div id="kt_app_content_container" class="app-container container-fluid">
                     <!--begin::Content-->
-                    <div class="d-flex flex-column flex-column-fluid">
-                        <!--begin::Usuarios -->
-                        <?php include_once "../includes/components/notif_seguidos.php" ?>
-                        <!--end::Usuarios -->
-                    </div>
+                    
                     <!--begin::Separator-->
                     <div class="separator separator-dashed my-5"></div>
                     <!--end::Separator-->
@@ -264,6 +260,36 @@ include '../includes/components/charity_card.php';
                                 <?php mostrarEvento(4); ?>
                             </div>
 
+                            <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                <?php mostrarCharity(10); ?>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                <?php mostrarProducto(4); ?>
+                            </div>
+                            
+                            <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                <?php mostrarCharity(2); ?>
+                            </div>
+                            <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                <?php mostrarProducto(5); ?>
+                            </div>
+                            <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                <?php mostrarProducto(6); ?>
+                            </div>
+                            
+                            <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                <?php mostrarEvento(4); ?>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                <?php mostrarCharity(6); ?>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+                                <?php mostrarProducto(7); ?>
+                            </div>
+                            
                             <div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
                                 <?php mostrarCharity(2); ?>
                             </div>

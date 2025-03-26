@@ -144,3 +144,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function startCountdown(targetDate) {
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance <= 0) {
+            document.getElementById("countdown-timer").innerHTML = "00:00:00";
+            return;
+        }
+
+        const hours = Math.floor(distance / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown-timer").innerHTML =
+            `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000); // Ahora actualiza cada segundo
+}
+
+// Configurar cuenta regresiva a 5 horas desde ahora
+const countdownEndDate = new Date();
+countdownEndDate.setHours(countdownEndDate.getHours() + 5.5);
+startCountdown(countdownEndDate);
