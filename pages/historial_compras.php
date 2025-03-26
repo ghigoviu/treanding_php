@@ -21,28 +21,8 @@ include '../layouts/header.php';
 						<!--begin::Title-->
 						<h1 class="page-heading d-flex text-gray-900 fw-bold fs-3 flex-column justify-content-center my-0">Historial de compras</h1>
 						<!--end::Title-->
-						<!--begin::Breadcrumb-->
-						<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
-							<!--begin::Item-->
-							<li class="breadcrumb-item text-muted">
-								<a href="index.php" class="text-muted text-hover-primary">Dashboard</a>
-							</li>
-							<!--end::Item-->
-							<!--begin::Item-->
-							<li class="breadcrumb-item">
-								<span class="bullet bg-gray-500 w-5px h-2px"></span>
-							</li>
-							<!--end::Item-->
-							<!--begin::Item-->
-							<li class="breadcrumb-item text-muted">Historial compras</li>
-							<!--end::Item-->
-						</ul>
-						<!--end::Breadcrumb-->
 					</div>
 					<!--end::Page title-->
-					<!--begin::Actions-->
-
-					<!--end::Actions-->
 				</div>
 				<!--end::Toolbar container-->
 			</div>
@@ -50,16 +30,7 @@ include '../layouts/header.php';
 			<!--begin::Content-->
 			<div id="kt_app_content" class="app-content flex-column-fluid">
 				<!--begin::Content container-->
-				<div class="container mt-4">
-					<div class="row">
-						<!-- Encabezado -->
-						<div class="col-12 mb-3 d-flex justify-content-between align-items-center">
-							<div class="search-bar">
-								<input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar">
-							</div>
-						</div>
-					</div>
-
+				<div class="container mt-4 card p-5">
 					<!-- Pestañas -->
 					<ul class="nav nav-tabs mb-3" id="purchaseHistoryTabs" role="tablist">
 						<li class="nav-item" role="presentation">
@@ -76,14 +47,58 @@ include '../layouts/header.php';
 					<div class="row">
 						<!-- Lista de historial -->
 						<div class="col-md-4">
-							<div class="list-group">
-								<?php for ($i = 1; $i <= 5; $i++): ?>
-									<button class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-										<img src="../public/img/producto<?= $i ?>.jpg" alt="img-producto" height="60" width="60">
-										<span>Producto <?= $i ?></span>
-										<small class="text-muted">May 2022</small>
-									</button>
-								<?php endfor; ?>
+							<!-- Buscador -->
+							<div class="tab-content">
+								<div class="tab-pane active" id="compras">
+									<div class="col-12 mb-3 d-flex justify-content-between align-items-center">
+										<div class="search-bar">
+											<input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar">
+										</div>
+									</div>
+									<div class="list-group">
+										<?php for ($i = 1; $i <= 5; $i++): ?>
+											<button class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+												<img src="../public/img/producto<?= $i ?>.jpg" alt="img-producto" height="60" width="60">
+												<span>Producto <?= $i ?></span>
+												<small class="text-muted">May 2022</small>
+											</button>
+										<?php endfor; ?>
+									</div>
+								</div>
+
+								<div class="tab-pane" id="devoluciones">
+									<div class="col-12 mb-3 d-flex justify-content-between align-items-center">
+										<div class="search-bar">
+											<input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar">
+										</div>
+									</div>
+									<div class="list-group">
+										<?php for ($i = 1; $i <= 5; $i++): ?>
+											<button class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+												<img src="../public/img/producto<?= $i ?>.jpg" alt="img-producto" height="60" width="60">
+												<span>Producto <?= $i ?></span>
+												<small class="text-muted">May 2022</small>
+											</button>
+										<?php endfor; ?>
+									</div>
+								</div>
+
+								<div class="tab-pane" id="regalos">
+									<div class="col-12 mb-3 d-flex justify-content-between align-items-center">
+										<div class="search-bar">
+											<input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar">
+										</div>
+									</div>
+									<div class="list-group">
+										<?php for ($i = 1; $i <= 5; $i++): ?>
+											<button class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+												<img src="../public/img/producto<?= $i ?>.jpg" alt="img-producto" height="60" width="60">
+												<span>Producto <?= $i ?></span>
+												<small class="text-muted">May 2022</small>
+											</button>
+										<?php endfor; ?>
+									</div>
+								</div>
 							</div>
 						</div>
 

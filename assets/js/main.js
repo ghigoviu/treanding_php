@@ -181,3 +181,20 @@ function ocultarCensura(boton, acceso) {
         }
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".nav-link");
+    const tabContents = document.querySelectorAll(".tab-pane");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+            // Quitar la clase 'active' de todas las pestañas
+            tabs.forEach(t => t.classList.remove("active"));
+            tabContents.forEach(content => content.classList.remove("active"));
+
+            // Activar la pestaña y su contenido asociado
+            tab.classList.add("active");
+            document.getElementById(tab.getAttribute("data-tab")).classList.add("active");
+        });
+    });
+});

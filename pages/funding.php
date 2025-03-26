@@ -155,11 +155,13 @@ include '../layouts/header.php';
                                             <button id="like-btn" class="btn btn-outline-secondary">
                                                 <i class="bi bi-heart"></i>
                                             </button>
-                                            <input type="text" class="form-control" placeholder="$ other">
+                                            <input type="text" class="form-control" placeholder="$ otro">
                                             <select class="form-select">
                                                 <option>USD</option>
+                                                <option>MXN</option>
+                                                <option>COL</option>
                                             </select>
-                                            <button class="btn btn-dark">Check out</button>
+                                            <button class="btn btn-dark">Check</button>
                                             <button class="btn btn-light">...</button>
                                         </div>
                                     </div>

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="canonical" href="http://preview.keenthemes.compages/faq/extended.html" />
-    <link rel="shortcut icon" href="./assets/media/logos/favicon.ico" />
+    <link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
     <!-- Incluye los archivos CSS y JS de Slick -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />

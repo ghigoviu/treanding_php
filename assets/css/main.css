@@ -183,7 +183,7 @@
     color: white;
     padding: 10px 15px;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: bold;
     min-width: 100px;
     text-align: center;
@@ -194,4 +194,11 @@
     backdrop-filter: blur(15px);
     text-align: center;
     padding: 20px;
+}
+
+.tab-pane {
+    display: none;
+}
+.tab-pane.active {
+    display: block;
 }
