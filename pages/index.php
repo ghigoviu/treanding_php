@@ -1,4 +1,18 @@
 <?php
+session_start();
+
+if (isset($_SESSION['error_login'])) {
+    echo "<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            alert('{$_SESSION['error_login']}');
+            var myModal = new bootstrap.Modal(document.getElementById('modal_loguin'));
+            myModal.show();
+        });
+    </script>";
+    unset($_SESSION['error_login']);
+}
+
+
 $title = "Inicio";
 include '../layouts/header.php';
 ?>

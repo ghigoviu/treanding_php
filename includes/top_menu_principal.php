@@ -325,7 +325,16 @@
 		<div class="app-navbar-item ms-1 ms-md-4" id="kt_header_user_menu_toggle">
 			<!--begin::Menu wrapper-->
 			<div class="cursor-pointer symbol symbol-35px" data-bs-toggle="modal" data-bs-target="#modal_loguin">
-				<img src="../assets/media/avatars/blank.png" class="rounded-3" alt="user" />
+				<i class="fas fa-sign-in-alt text-primary fs-2"></i>
+			</div>
+
+			<!--end::Menu wrapper-->
+		</div>
+
+		<div class="app-navbar-item ms-1 ms-md-4" id="kt_header_user_menu_toggle">
+			<!--begin::Menu wrapper-->
+			<div class="cursor-pointer symbol symbol-35px" data-bs-toggle="modal" data-bs-target="#modal_registro">
+				<i class="fas fa-user-plus text-primary fs-2"></i>
 			</div>
 
 			<!--end::Menu wrapper-->
