@@ -1,4 +1,16 @@
 <?php
+session_start();
+
+if (isset($_SESSION['success_login'])) {
+    echo "<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            alert('{$_SESSION['success_login']}');
+        });
+    </script>";
+    unset($_SESSION['success_login']);
+}
+?>
+<?php
 $title = "Marketplace";
 include '../layouts/header.php';
 include '../includes/components/product_card.php';
@@ -8,7 +20,9 @@ include '../includes/components/charity_card.php';
 <!--begin::Wrapper-->
 <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
     <!--begin::Sidebar-->
+    <?php if (isset($_SESSION['usuario'])): ?>
     <?php include_once '../includes/sidebar_menu.php'; ?>
+    <?php endif; ?>
     <!--end::Sidebar-->
 
     <!--begin::Main -->
