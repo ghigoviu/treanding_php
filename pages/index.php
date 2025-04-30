@@ -12,7 +12,6 @@ if (isset($_SESSION['error_login'])) {
     unset($_SESSION['error_login']);
 }
 
-
 $title = "Inicio";
 include '../layouts/header.php';
 ?>
