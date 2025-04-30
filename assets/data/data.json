@@ -3,82 +3,92 @@
         {
             "id": 1,
             "nombre": "Carlos M\u00e9ndez",
+            "nickname": "CarMen",
             "email": "carlos@email.com",
             "membres\u00eda": "premium",
             "img_perfil": "300-1.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 2,
             "nombre": "Juan Mart\u00ednez",
+            "nickname": "JuanMa",
             "email": "juan@email.com",
             "membres\u00eda": "b\u00e1sica",
             "img_perfil": "300-3.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 3,
             "nombre": "Mar\u00eda Vasconcelos",
+            "nickname": "Marva",
             "email": "maria@email.com",
             "membres\u00eda": "premium",
             "img_perfil": "300-2.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 4,
             "nombre": "Ana Guadarrama",
+            "nickname": "Agua",
             "email": "ana@email.com",
             "membres\u00eda": "b\u00e1sica",
             "img_perfil": "300-4.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 5,
             "nombre": "Luis Colosio",
+            "nickname": "LuCo",
             "email": "luis@email.com",
             "membres\u00eda": "premium",
             "img_perfil": "300-5.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 6,
             "nombre": "Sof\u00eda Rodr\u00edguez",
+            "nickname": "SoFro",
             "email": "sofia@email.com",
             "membres\u00eda": "b\u00e1sica",
             "img_perfil": "300-6.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 7,
             "nombre": "Pedro Bermudez",
+            "nickname": "PeBer",
             "email": "pedro@email.com",
             "membres\u00eda": "premium",
             "img_perfil": "300-7.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 8,
             "nombre": "Elena Avalon",
+            "nickname": "Elava",
             "email": "elena@email.com",
             "membres\u00eda": "b\u00e1sica",
             "img_perfil": "300-8.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 9,
             "nombre": "Diego Fuentes",
+            "nickname": "DiFue",
             "email": "diego@email.com",
             "membres\u00eda": "premium",
             "img_perfil": "300-9.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 10,
             "nombre": "Fernanda Castillo",
+            "nickname": "FerCas",
             "email": "fernanda@email.com",
             "membres\u00eda": "b\u00e1sica",
             "img_perfil": "300-10.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 11,
@@ -87,7 +97,7 @@
             "email": "ricardo@email.com",
             "membres\u00eda": "premium",
             "img_perfil": "300-11.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 12,
@@ -96,7 +106,7 @@
             "email": "valeria@email.com",
             "membres\u00eda": "b\u00e1sica",
             "img_perfil": "300-12.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 13,
@@ -105,7 +115,7 @@
             "email": "andres@email.com",
             "membres\u00eda": "premium",
             "img_perfil": "300-13.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 14,
@@ -114,7 +124,7 @@
             "email": "camila@email.com",
             "membres\u00eda": "b\u00e1sica",
             "img_perfil": "300-14.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 15,
@@ -123,7 +133,7 @@
             "email": "javier@email.com",
             "membres\u00eda": "premium",
             "img_perfil": "300-15.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 16,
@@ -132,7 +142,7 @@
             "email": "paula@email.com",
             "membres\u00eda": "b\u00e1sica",
             "img_perfil": "300-16.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 17,
@@ -141,7 +151,7 @@
             "email": "gabriel@email.com",
             "membres\u00eda": "premium",
             "img_perfil": "300-17.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 18,
@@ -150,7 +160,7 @@
             "email": "natalia@email.com",
             "membres\u00eda": "b\u00e1sica",
             "img_perfil": "300-18.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 19,
@@ -159,7 +169,7 @@
             "email": "hector@email.com",
             "membres\u00eda": "premium",
             "img_perfil": "300-19.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 20,
@@ -168,53 +178,13 @@
             "email": "andrea@email.com",
             "membres\u00eda": "b\u00e1sica",
             "img_perfil": "300-20.jpg",
-            "password": "1234"
+            "password": "12345678"
         },
         {
             "id": 21,
-            "nombre": "francisco sandoval",
-            "email": "sandoval@gmail.com",
-            "password": "$2y$10$3n7p6BEKTITVT8hHwtFy6O3gz9EW02eOqbUcYIazgQsYhrRjxkrMy",
-            "membres\u00eda": "b\u00e1sica",
-            "img_perfil": "default.jpg"
-        },
-        {
-            "id": 22,
-            "nombre": "francisco san",
-            "email": "sando@gmail.com",
-            "password": "$2y$10$MoOLiGD8.g3z6ZuNsXNz0Oi3DH8t86IRVqmkxsFh\/THOxaTilIb\/.",
-            "membres\u00eda": "b\u00e1sica",
-            "img_perfil": "default.jpg"
-        },
-        {
-            "id": 23,
-            "nombre": "Roy cambrai",
-            "email": "roy@gmail.com",
-            "password": "1234",
-            "membres\u00eda": "b\u00e1sica",
-            "img_perfil": "default.jpg"
-        },
-        {
-            "id": 24,
-            "nombre": "frankiiiriver",
-            "email": "frank@gmail",
-            "password": "$2y$10$g5COTQVLj6bnmcnAHrBhvORlazXhq7ZzWtJhsn7YIr\/8SVHWeMecy",
-            "membres\u00eda": "b\u00e1sica",
-            "img_perfil": "default.jpg"
-        },
-        {
-            "id": 25,
-            "nombre": "prueba alejandro",
-            "email": "ale@prueba.com",
-            "password": "1234",
-            "membres\u00eda": "b\u00e1sica",
-            "img_perfil": "default.jpg"
-        },
-        {
-            "id": 26,
-            "nombre": "Rodrigo Cambray Barrera",
-            "email": "rodrigocam@g.com",
-            "password": "1234",
+            "nombre": "RoyX3",
+            "email": "royx3",
+            "password": "12345678",
             "membres\u00eda": "b\u00e1sica",
             "img_perfil": "default.jpg"
         }
@@ -768,7 +738,9 @@
             ],
             "stock": 10,
             "cantidad_vendida": 5,
-            "fecha_creacion": "2024-02-15T10:00:00Z"
+            "fecha_creacion": "2024-02-15T10:00:00Z",
+            "rate": 4.3,
+            "requiere_edad": 0
         },
         {
             "id": 2,
@@ -784,7 +756,9 @@
             ],
             "stock": 20,
             "cantidad_vendida": 8,
-            "fecha_creacion": "2024-02-16T11:00:00Z"
+            "fecha_creacion": "2024-02-16T11:00:00Z",
+            "rate": 3.5,
+            "requiere_edad": 0
         },
         {
             "id": 3,
@@ -800,7 +774,9 @@
             ],
             "stock": 5,
             "cantidad_vendida": 2,
-            "fecha_creacion": "2024-02-17T12:00:00Z"
+            "fecha_creacion": "2024-02-17T12:00:00Z",
+            "rate": 4.1,
+            "requiere_edad": 1
         },
         {
             "id": 4,
@@ -816,7 +792,9 @@
             ],
             "stock": 15,
             "cantidad_vendida": 7,
-            "fecha_creacion": "2024-02-18T13:00:00Z"
+            "fecha_creacion": "2024-02-18T13:00:00Z",
+            "rate": 4,
+            "requiere_edad": 0
         },
         {
             "id": 5,
@@ -832,7 +810,9 @@
             ],
             "stock": 12,
             "cantidad_vendida": 6,
-            "fecha_creacion": "2024-02-19T14:00:00Z"
+            "fecha_creacion": "2024-02-19T14:00:00Z",
+            "rate": 3.8,
+            "requiere_edad": 0
         },
         {
             "id": 6,
@@ -848,7 +828,9 @@
             ],
             "stock": 10,
             "cantidad_vendida": 3,
-            "fecha_creacion": "2024-02-20T15:00:00Z"
+            "fecha_creacion": "2024-02-20T15:00:00Z",
+            "rate": 5,
+            "requiere_edad": 0
         },
         {
             "id": 7,
@@ -864,7 +846,9 @@
             ],
             "stock": 8,
             "cantidad_vendida": 5,
-            "fecha_creacion": "2024-02-21T16:00:00Z"
+            "fecha_creacion": "2024-02-21T16:00:00Z",
+            "rate": 4.4,
+            "requiere_edad": 0
         },
         {
             "id": 8,
@@ -880,7 +864,9 @@
             ],
             "stock": 20,
             "cantidad_vendida": 9,
-            "fecha_creacion": "2024-02-22T17:00:00Z"
+            "fecha_creacion": "2024-02-22T17:00:00Z",
+            "rate": 4.1,
+            "requiere_edad": 0
         },
         {
             "id": 9,
@@ -896,7 +882,9 @@
             ],
             "stock": 15,
             "cantidad_vendida": 6,
-            "fecha_creacion": "2024-02-23T18:00:00Z"
+            "fecha_creacion": "2024-02-23T18:00:00Z",
+            "rate": 4.9,
+            "requiere_edad": 0
         },
         {
             "id": 10,
@@ -912,7 +900,9 @@
             ],
             "stock": 10,
             "cantidad_vendida": 4,
-            "fecha_creacion": "2024-02-24T19:00:00Z"
+            "fecha_creacion": "2024-02-24T19:00:00Z",
+            "rate": 3.1,
+            "requiere_edad": 0
         },
         {
             "id": 11,
@@ -928,7 +918,9 @@
             ],
             "stock": 12,
             "cantidad_vendida": 5,
-            "fecha_creacion": "2024-02-25T20:00:00Z"
+            "fecha_creacion": "2024-02-25T20:00:00Z",
+            "rate": 4,
+            "requiere_edad": 1
         },
         {
             "id": 12,
@@ -944,7 +936,9 @@
             ],
             "stock": 7,
             "cantidad_vendida": 3,
-            "fecha_creacion": "2024-02-26T21:00:00Z"
+            "fecha_creacion": "2024-02-26T21:00:00Z",
+            "rate": 4.2,
+            "requiere_edad": 0
         },
         {
             "id": 13,
@@ -960,7 +954,9 @@
             ],
             "stock": 18,
             "cantidad_vendida": 7,
-            "fecha_creacion": "2024-02-27T22:00:00Z"
+            "fecha_creacion": "2024-02-27T22:00:00Z",
+            "rate": 3.9,
+            "requiere_edad": 0
         },
         {
             "id": 14,
@@ -976,7 +972,9 @@
             ],
             "stock": 6,
             "cantidad_vendida": 2,
-            "fecha_creacion": "2024-02-28T23:00:00Z"
+            "fecha_creacion": "2024-02-28T23:00:00Z",
+            "rate": 4.5,
+            "requiere_edad": 1
         },
         {
             "id": 15,
@@ -992,7 +990,9 @@
             ],
             "stock": 4,
             "cantidad_vendida": 1,
-            "fecha_creacion": "2024-03-01T00:00:00Z"
+            "fecha_creacion": "2024-03-01T00:00:00Z",
+            "rate": 4.6,
+            "requiere_edad": 0
         },
         {
             "id": 16,
@@ -1008,7 +1008,9 @@
             ],
             "stock": 8,
             "cantidad_vendida": 4,
-            "fecha_creacion": "2024-03-02T01:00:00Z"
+            "fecha_creacion": "2024-03-02T01:00:00Z",
+            "rate": 3.6,
+            "requiere_edad": 0
         },
         {
             "id": 17,
@@ -1024,7 +1026,9 @@
             ],
             "stock": 7,
             "cantidad_vendida": 3,
-            "fecha_creacion": "2024-03-03T02:00:00Z"
+            "fecha_creacion": "2024-03-03T02:00:00Z",
+            "rate": 4.4,
+            "requiere_edad": 0
         },
         {
             "id": 18,
@@ -1040,7 +1044,9 @@
             ],
             "stock": 50,
             "cantidad_vendida": 10,
-            "fecha_creacion": "2024-02-20T14:00:00Z"
+            "fecha_creacion": "2024-02-20T14:00:00Z",
+            "rate": 3.9,
+            "requiere_edad": 0
         },
         {
             "id": 19,
@@ -1056,7 +1062,9 @@
             ],
             "stock": 30,
             "cantidad_vendida": 5,
-            "fecha_creacion": "2024-01-10T09:00:00Z"
+            "fecha_creacion": "2024-01-10T09:00:00Z",
+            "rate": 4.4,
+            "requiere_edad": 0
         }
     ],
     "reviews": [
@@ -2011,6 +2019,218 @@
             "usuario_seguidor": 13,
             "usuario_seguido": 15,
             "fecha_solicitud": "2024-02-20T20:00:00Z"
+        }
+    ],
+    "registros_evento": [
+        {
+            "id": 1,
+            "usuario_id": 3,
+            "evento_id": 2,
+            "fecha_registro": "2025-02-01T12:30:00Z",
+            "estado": "confirmado"
+        },
+        {
+            "id": 2,
+            "usuario_id": 5,
+            "evento_id": 2,
+            "fecha_registro": "2025-02-02T14:45:00Z",
+            "estado": "pendiente"
+        },
+        {
+            "id": 3,
+            "usuario_id": 1,
+            "evento_id": 4,
+            "fecha_registro": "2025-02-03T10:15:00Z",
+            "estado": "confirmado"
+        },
+        {
+            "id": 4,
+            "usuario_id": 2,
+            "evento_id": 5,
+            "fecha_registro": "2025-02-04T09:30:00Z",
+            "estado": "cancelado"
+        },
+        {
+            "id": 5,
+            "usuario_id": 4,
+            "evento_id": 6,
+            "fecha_registro": "2025-02-05T16:00:00Z",
+            "estado": "confirmado"
+        },
+        {
+            "id": 6,
+            "usuario_id": 3,
+            "evento_id": 8,
+            "fecha_registro": "2025-02-06T13:20:00Z",
+            "estado": "pendiente"
+        },
+        {
+            "id": 7,
+            "usuario_id": 2,
+            "evento_id": 9,
+            "fecha_registro": "2025-02-07T17:10:00Z",
+            "estado": "confirmado"
+        },
+        {
+            "id": 8,
+            "usuario_id": 1,
+            "evento_id": 1,
+            "fecha_registro": "2025-02-08T18:45:00Z",
+            "estado": "pendiente"
+        },
+        {
+            "id": 9,
+            "usuario_id": 5,
+            "evento_id": 10,
+            "fecha_registro": "2025-02-09T20:00:00Z",
+            "estado": "confirmado"
+        },
+        {
+            "id": 10,
+            "usuario_id": 4,
+            "evento_id": 3,
+            "fecha_registro": "2025-02-10T15:55:00Z",
+            "estado": "confirmado"
+        },
+        {
+            "id": 11,
+            "usuario_id": 6,
+            "evento_id": 7,
+            "fecha_registro": "2025-02-11T11:30:00Z",
+            "estado": "pendiente"
+        },
+        {
+            "id": 12,
+            "usuario_id": 7,
+            "evento_id": 2,
+            "fecha_registro": "2025-02-12T09:20:00Z",
+            "estado": "cancelado"
+        },
+        {
+            "id": 13,
+            "usuario_id": 8,
+            "evento_id": 5,
+            "fecha_registro": "2025-02-13T14:00:00Z",
+            "estado": "confirmado"
+        },
+        {
+            "id": 14,
+            "usuario_id": 9,
+            "evento_id": 1,
+            "fecha_registro": "2025-02-14T13:45:00Z",
+            "estado": "pendiente"
+        },
+        {
+            "id": 15,
+            "usuario_id": 10,
+            "evento_id": 4,
+            "fecha_registro": "2025-02-15T12:10:00Z",
+            "estado": "confirmado"
+        },
+        {
+            "id": 16,
+            "usuario_id": 11,
+            "evento_id": 3,
+            "fecha_registro": "2025-02-16T15:30:00Z",
+            "estado": "pendiente"
+        },
+        {
+            "id": 17,
+            "usuario_id": 12,
+            "evento_id": 6,
+            "fecha_registro": "2025-02-17T11:15:00Z",
+            "estado": "confirmado"
+        },
+        {
+            "id": 18,
+            "usuario_id": 13,
+            "evento_id": 8,
+            "fecha_registro": "2025-02-18T16:40:00Z",
+            "estado": "pendiente"
+        },
+        {
+            "id": 19,
+            "usuario_id": 14,
+            "evento_id": 10,
+            "fecha_registro": "2025-02-19T18:55:00Z",
+            "estado": "confirmado"
+        },
+        {
+            "id": 20,
+            "usuario_id": 15,
+            "evento_id": 9,
+            "fecha_registro": "2025-02-20T17:20:00Z",
+            "estado": "cancelado"
+        },
+        {
+            "id": 21,
+            "usuario_id": 16,
+            "evento_id": 2,
+            "fecha_registro": "2025-02-21T14:30:00Z",
+            "estado": "pendiente"
+        },
+        {
+            "id": 22,
+            "usuario_id": 17,
+            "evento_id": 7,
+            "fecha_registro": "2025-02-22T13:10:00Z",
+            "estado": "confirmado"
+        },
+        {
+            "id": 23,
+            "usuario_id": 18,
+            "evento_id": 5,
+            "fecha_registro": "2025-02-23T12:05:00Z",
+            "estado": "pendiente"
+        },
+        {
+            "id": 24,
+            "usuario_id": 19,
+            "evento_id": 1,
+            "fecha_registro": "2025-02-24T11:00:00Z",
+            "estado": "confirmado"
+        },
+        {
+            "id": 25,
+            "usuario_id": 20,
+            "evento_id": 3,
+            "fecha_registro": "2025-02-25T10:50:00Z",
+            "estado": "cancelado"
+        },
+        {
+            "id": 26,
+            "usuario_id": 1,
+            "evento_id": 10,
+            "fecha_registro": "2025-02-26T15:20:00Z",
+            "estado": "confirmado"
+        },
+        {
+            "id": 27,
+            "usuario_id": 2,
+            "evento_id": 6,
+            "fecha_registro": "2025-02-27T16:30:00Z",
+            "estado": "pendiente"
+        },
+        {
+            "id": 28,
+            "usuario_id": 3,
+            "evento_id": 7,
+            "fecha_registro": "2025-02-28T13:40:00Z",
+            "estado": "confirmado"
+        },
+        {
+            "id": 29,
+            "usuario_id": 4,
+            "evento_id": 9,
+            "fecha_registro": "2025-02-28T14:50:00Z",
+            "estado": "pendiente"
+        },
+        {
+            "id": 30,
+            "usuario_id": 5,
+            "evento_id": 4,
+            "fecha_registro": "2025-02-28T17:55:00Z",
+            "estado": "confirmado"
         }
     ]
 }

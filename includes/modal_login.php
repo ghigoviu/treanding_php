@@ -1,13 +1,5 @@
-<!DOCTYPE html> 
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Modal Login</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Icons (para la flechita) -->
+<div>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Estilos personalizados -->
@@ -52,15 +44,6 @@
             border-radius: 10px;
         }
     </style>
-</head>
-<body>
-
-<!-- Botón para abrir el modal 
-<div class="d-flex justify-content-center mt-5">
-    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_loguin">
-        Abrir Login
-    </button>
-</div>-->
 
 <!-- Modal Login -->
 <div class="modal fade" tabindex="-1" id="modal_loguin">
@@ -134,5 +117,4 @@
     });
 </script>
 
-</body>
-</html>
+</div> 
