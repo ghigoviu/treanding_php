@@ -6,6 +6,9 @@ include '../layouts/header.php';
 include '../includes/components/product_card.php';
 include '../includes/components/event_card.php';
 include '../includes/components/charity_card.php';
+require_once '../controller/Sesion.php';
+
+$sesion = new Sesion();
 ?>
 
 
@@ -126,22 +129,35 @@ include '../includes/components/charity_card.php';
 <!--end::Wrapper-->
 <?php include '../layouts/footer.php'; ?>
 
+<?php if (!$sesion->isAuthenticated()): ?>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginModal = new bootstrap.Modal(document.getElementById('modal_login'));
+            loginModal.show();
+        });
+    </script>
+<?php endif; ?>
+
 <?php
-if (isset($_SESSION['success_login'])) {
+$successLogin = $sesion->getFlash('success_login');
+if ($successLogin) {
     echo "<script>
         document.addEventListener('DOMContentLoaded', function () {
-            alert('" . addslashes($_SESSION['success_login']) . "');
+            alert('" . addslashes($successLogin) . "');
         });
     </script>";
-    unset($_SESSION['success_login']);
 }
 
-if (isset($_SESSION['error_login'])) {
+$errorLogin = $sesion->getFlash('error_login');
+if ($errorLogin) {
     echo "<script>
         document.addEventListener('DOMContentLoaded', function () {
-            alert('" . addslashes($_SESSION['error_login']) . "');
+            alert('" . addslashes($errorLogin) . "');
+            // Reabrir el modal si falla el login
+            const loginModal = new bootstrap.Modal(document.getElementById('modal_loguin'));
+            loginModal.show();
         });
     </script>";
-    unset($_SESSION['error_login']);
 }
+
 ?>

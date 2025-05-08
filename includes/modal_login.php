@@ -46,7 +46,7 @@
     </style>
 
 <!-- Modal Login -->
-<div class="modal fade" tabindex="-1" id="modal_loguin">
+<div class="modal fade" tabindex="-1" id="modal_login">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content shadow">
 
@@ -80,6 +80,11 @@
                         </button>
                     </div>
                 </form>
+
+                <div class="cursor-pointer symbol symbol-35px" data-bs-toggle="modal" data-bs-target="#modal_registro">
+				    <!-- <i class="text-center fas fa-user-plus text-primary fs-2"></i> -->
+                    <h6 class="text-center my-5">Soy nuevo</h6>
+			    </div>
 
                 <!-- Selector de idioma con bandera -->
                 <div class="idioma-select mt-4">

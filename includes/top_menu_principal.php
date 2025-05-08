@@ -1,3 +1,8 @@
+<?php
+require_once '../controller/Sesion.php';
+$sesion = new Sesion();
+?>
+
 <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1" id="kt_app_header_wrapper">
 	<!--begin::Menu wrapper-->
 	<div class="app-header-menu app-header-mobile-drawer align-items-stretch" data-kt-drawer="true" data-kt-drawer-name="app-header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="250px" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_app_header_menu_toggle" data-kt-swapper="true" data-kt-swapper-mode="{default: 'append', lg: 'prepend'}" data-kt-swapper-parent="{default: '#kt_app_body', lg: '#kt_app_header_wrapper'}">
@@ -110,7 +115,7 @@
 			<div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true" id="kt_menu_notifications">
 				<!--begin::Header-->
 				<div class="d-flex flex-stack px-4 py-3 border-bottom">
-					<h3 class="text-gray-800 fw-semibold fs-6">Notificatinos</h3>
+					<h3 class="text-gray-800 fw-semibold fs-6">Notifications</h3>
 					<span class="badge bg-light text-muted fs-8">99 total</span>
 				</div>
 				<!--end::Header-->
@@ -174,33 +179,29 @@
 			</div>
 		</div>
 		<!--end::config shop-->
-		<!--begin::User menu sin loguear-->
-		<div class="app-navbar-item ms-1 ms-md-4" id="kt_header_user_menu_toggle">
-			<!--begin::Menu wrapper-->
-			<div class="cursor-pointer symbol symbol-35px" data-bs-toggle="modal" data-bs-target="#modal_loguin">
-				<i class="fas fa-sign-in text-primary fs-2"></i>
+		<?php if (!$sesion->isAuthenticated()): ?>
+			<!--begin::User menu sin loguear-->
+			<div class="app-navbar-item ms-1 ms-md-4" id="kt_header_user_menu_toggle">
+				<!--begin::Menu wrapper-->
+				<div class="cursor-pointer symbol symbol-35px" data-bs-toggle="modal" data-bs-target="#modal_loguin">
+					<img src="../assets/media/avatars/blank.png" class="rounded-3" alt="user" />
+				</div>
+				<!--end::Menu wrapper-->
 			</div>
+			<!--end::User menu sin loguear-->
+		<?php else: ?>
+			<!--begin::User menu logueado-->
+			<?php include '../includes/components/logged_user.php'; ?>
+			<!--end::User menu logueado-->
+		<?php endif; ?>
 
-			<!--end::Menu wrapper-->
-		</div>
-
+		<!-- 
 		<div class="app-navbar-item ms-1 ms-md-4" id="kt_header_user_menu_toggle">
-			<!--begin::Menu wrapper-->
 			<div class="cursor-pointer symbol symbol-35px" data-bs-toggle="modal" data-bs-target="#modal_registro">
 				<i class="fas fa-user-plus text-primary fs-2"></i>
 			</div>
-
-			<!--end::Menu wrapper-->
 		</div>
-		<!--end::User menu sin loguear-->
-
-		<!--begin::User menu logueado-->
-
-		<!-- El componente se encuentra en includes/componente_usuario_logueado_top_menu.php solo
-									agregarlo si el usuario se encuentra logueado -->
-		<!-- include('includes/componente_usuario_logueado_top_menu.php'); ?> -->
-
-		<!--end::User menu logueado-->
+		-->
 
 		<!--begin::Header menu toggle-->
 		<div class="app-navbar-item d-lg-none ms-2 me-n2" title="Show header menu">

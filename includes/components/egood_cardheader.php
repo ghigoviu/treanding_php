@@ -23,7 +23,7 @@ if (!function_exists('headerUsuario')) {
             <div class="card-title py-0 m-0">
                 <!--begin::Avatar-->
                 <div class="symbol symbol-40px symbol-circle me-1">
-                    <img alt="Pic" src="../assets/media/avatars/<?php echo htmlspecialchars($usuario['img_perfil']); ?>">
+                    <img alt="Pic" src="<?php echo htmlspecialchars($usuario['img_perfil']); ?>">
                 </div>
 
                 <div class="d-flex justify-content-center flex-column me-1">
