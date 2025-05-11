@@ -133,7 +133,7 @@
                                                                         <!--begin::Wrapper-->
                                                                         <div class="d-flex align-items-center">
                                                                             <!--begin::Icon-->
-                                                                            <img src="assets/media/svg/card-logos/mastercard.svg" alt="" class="me-4" />
+                                                                            <img src="../assets/media/svg/card-logos/mastercard.svg" alt="" class="me-4" />
                                                                             <!--end::Icon-->
                                                                             <!--begin::Details-->
                                                                             <div>

@@ -21,7 +21,6 @@ include_once '../controller/Sesion.php';
 				<div class="d-flex flex-column">
 					<div class="fw-bold d-flex align-items-center fs-5">
 						<?php echo $_SESSION['user_data']['nombre'] ?>
-						<!-- <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span> --> 
 					</div>
 					<a href="#" class="fw-semibold text-muted text-hover-primary fs-7">
 						<?php echo $_SESSION['user_data']['email'] ?>
@@ -36,12 +35,12 @@ include_once '../controller/Sesion.php';
 		<!--end::Menu separator-->
 		<!--begin::Menu item-->
 		<div class="menu-item px-5">
-			<a href="account/overview.html" class="menu-link px-5">My Profile</a>
+			<a href="./profile.php" class="menu-link px-5">My Profile</a>
 		</div>
 		<!--end::Menu item-->
 		<!--begin::Menu item-->
 		<div class="menu-item px-5 my-1">
-			<a href="account/settings.html" class="menu-link px-5">Account Settings</a>
+			<a href="./profile.php" class="menu-link px-5">Account Settings</a>
 		</div>
 		<!--end::Menu item-->
 		<!--begin::Menu item-->

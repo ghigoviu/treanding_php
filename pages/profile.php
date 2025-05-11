@@ -1,27 +1,27 @@
 <?php
 include '../includes/components/product_card.php';
-$data = json_decode(file_get_contents('../assets/data/data.json'), true);
+require_once '../controller/Sesion.php';
+$sesion = new Sesion();
 
-// Suponiendo que el ID del usuario se pasa en la URL como parámetro (ejemplo: perfil.php?id=1)
-$id_usuario = isset($_GET['id']) ? (int)$_GET['id'] : 1; // Aquí lo asignamos por defecto a 1 para evitar errores si no hay id
-
-// Buscar el usuario en el array de usuarios
-$usuario = null;
-foreach ($data['usuarios'] as $user) {
-	if ($user['id'] === $id_usuario) {
-		$usuario = $user;
-		break;
-	}
+// ✅ Verificar si el usuario está logueado
+if (!$sesion->isAuthenticated()) {
+	// Redirigir si no hay sesión activa
+	header('Location: ../pages/login.php');
+	exit;
 }
 
-// Verificar si el usuario existe
+// ✅ Obtener los datos del usuario desde la sesión
+$usuario = $sesion->getUserData();
+
 if (!$usuario) {
-	die('Usuario no encontrado');
+	die('Error al recuperar la información del usuario.');
 }
 
-// Aquí, ahora tienes todos los datos del usuario en la variable $usuario
-$title = "Perfil " . $usuario['nombre'];
-include '../layouts/header.php';
+// ✅ Definir el título dinámicamente
+$title = "Perfil " . htmlspecialchars($usuario['nombre']);
+
+include_once '../layouts/header.php';
+$productos = $_SESSION['user_data']['productos'] ?? [];
 
 ?>
 <!--begin::Wrapper-->
@@ -47,7 +47,7 @@ include '../layouts/header.php';
 							<div class="col-md-2">
 								<div class="d-flex flex-column flex-shrink-0 p-3 bg-light sidebar">
 									<div class="profile-card bg-white p-2 rounded shadow">
-										<img src="../assets/media/avatars/<?php echo $usuario['img_perfil']; ?>" class="rounded-circle profile-picture z-3" alt="Profile Picture">
+										<img src="<?php echo $usuario['img_perfil']; ?>" class="rounded-circle profile-picture z-3" alt="Profile Picture">
 										<h4 class="mb-0"><?php echo $usuario['nombre']; ?></h4>
 										<p class="text-muted"><?php echo '@' . strtolower($usuario['nombre']); ?></p>
 										<div class="d-flex justify-content-center gap-4">
@@ -115,22 +115,21 @@ include '../layouts/header.php';
 									<!--begin::Row-->
 									<h5>All products</h5>
 									<div class="row g-2 g-xl-4">
-										<div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
-											<?php mostrarProducto(2); ?>
-										</div>
-										<div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
-											<?php mostrarProducto(3); ?>
-										</div>
-										<div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
-											<?php mostrarProducto(4); ?>
-										</div>
-										<div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
-											<?php mostrarProducto(5); ?>
-										</div>
-										<div class="col-sm-6 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
-											<?php mostrarProducto(6); ?>
-										</div> <!--end::Row-->
+										<?php
+										if (!empty($productos)) {
+											foreach ($productos as $producto) {
+										?>
+												<div class="col-sm-6 col-md-3 col-xl-4 col-lg-3 col-xxl-3">
+													<?php mostrarProducto($producto['id']); ?>
+												</div>
+										<?php
+											}
+										} else {
+											echo '<p>No hay productos disponibles.</p>';
+										}
+										?>
 									</div>
+									<!--end::Row-->
 								</div>
 							</div>
 

@@ -13,21 +13,14 @@
             <div class="modal-body">
                 <!--begin::Form-->
                 <!--<form class="form w-100" novalidate="novalidate" id="kt_sign_up_form" action="#">-->
-                <form class="form w-100" novalidate="novalidate" id="kt_sign_up_form" action="register.php" method="POST">
+                <form class="form w-100" novalidate="novalidate" id="kt_sign_up_form" action="../services/register.php" method="POST">
 
-                    <!--begin::Input group=-->
                     <div class="fv-row mb-4">
-                        <input type="text" placeholder="Nombre completo" name="full-name" autocomplete="off" class="form-control bg-transparent border-2 rounded-3 py-3 px-4" />
+                        <input type="text" placeholder="Nombre completo" name="nombre" autocomplete="off" class="form-control bg-transparent border-2 rounded-3 py-3 px-4" />
                     </div>
-                    <!--end::Input group=-->
-                    
-                    <!--begin::Input group=-->
                     <div class="fv-row mb-4">
                         <input type="email" placeholder="Email" name="email" autocomplete="off" class="form-control bg-transparent border-2 rounded-3 py-3 px-4" />
                     </div>
-                    <!--end::Input group-->
-
-                    <!--begin::Input group-->
                     <div class="fv-row mb-4" data-kt-password-meter="true">
                         <div class="position-relative mb-3">
                             <input class="form-control bg-transparent border-2 rounded-3 py-3 px-4" type="password" id="password" placeholder="Contraseña" name="password" autocomplete="off" />
@@ -43,22 +36,15 @@
                             <div class="flex-grow-1 bg-secondary rounded h-5px"></div>
                         </div>
                     </div>
-                    <!--end::Input group-->
-
-                    <!--begin::Repeat Password-->
                     <div class="fv-row mb-4">
                         <input placeholder="Repetir contraseña" name="confirm-password" type="password" autocomplete="off" class="form-control bg-transparent border-2 rounded-3 py-3 px-4" />
                     </div>
-                    <!--end::Repeat Password-->
-                    
-                    <!--begin::Accept-->
                     <div class="fv-row mb-4">
                         <label class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" name="toc" value="1" />
                             <span class="form-check-label fw-semibold text-gray-700 fs-base ms-1">Acepto los <a href="#" class="ms-1 link-primary">términos y condiciones</a></span>
                         </label>
                     </div>
-                    <!--end::Accept-->
                     
                     <!--begin::Submit button-->
                     <div class="d-grid mb-4">
@@ -72,7 +58,7 @@
                     
                     <!--begin::Sign up-->
                     <div class="text-gray-500 text-center fw-semibold fs-6">¿Ya tienes una cuenta? 
-                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modal_registro" class="link-primary fw-semibold">Inicia sesión</a>
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modal_login" class="link-primary fw-semibold">Inicia sesión</a>
                     </div>
                     <!--end::Sign up-->
                 </form>
@@ -212,6 +198,7 @@
         .then(res => res.json())
         .then(data => {
             if (data.status === 'success') {
+                console.log('Usuario registrado con éxito:', data.response);
                 // ✅ Si todo sale bien, redirige a verify_email.php
                 window.location.href = data.redirect;
             } else {
@@ -220,9 +207,9 @@
             }
         })
         .catch(error => {
+            console.log('Error JSON: ', formData);
             console.error('Error al registrar:', error);
-            alert('❌ Error al registrar el usuario');
+            alert('Error al registrar el usuario', error);
         });
     });
 </script>
-

@@ -195,14 +195,6 @@ $sesion = new Sesion();
 			<!--end::User menu logueado-->
 		<?php endif; ?>
 
-		<!-- 
-		<div class="app-navbar-item ms-1 ms-md-4" id="kt_header_user_menu_toggle">
-			<div class="cursor-pointer symbol symbol-35px" data-bs-toggle="modal" data-bs-target="#modal_registro">
-				<i class="fas fa-user-plus text-primary fs-2"></i>
-			</div>
-		</div>
-		-->
-
 		<!--begin::Header menu toggle-->
 		<div class="app-navbar-item d-lg-none ms-2 me-n2" title="Show header menu">
 			<div class="btn btn-flex btn-icon btn-active-color-primary w-30px h-30px" id="kt_app_header_menu_toggle">

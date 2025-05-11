@@ -19,7 +19,8 @@ function mostrarCharity($id)
     }
 ?>
 
-    <div class="card shadow-sm mx-2">
+    
+    <div class="card shadow-sm position-relative">
         <?php headerUsuario(10) ?>
         <div class="position-relative charity-info">
             <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover">
@@ -33,16 +34,21 @@ function mostrarCharity($id)
             </div>
         </div>
 
-        <div class="card-body p-2">
-            <p class="fw-bold mb-1"><?php echo $evento['nombre']; ?></p>
-            <div class="d-flex gap-2 mb-2 botones-container">
-                <button class="btn btn-outline btn-sm" id="btn1" data-value="10">$10</button>
-                <button class="btn btn-outline btn-sm" id="btn2" data-value="100">$100</button>
-                <button class="btn btn-outline btn-sm" id="btn3" data-value="1000">$1,000</button>
-                <button class="btn text-white btn-sm btn-cart"><i class="bi bi-cart"></i></button>
+        <div class="card-footer px-3 py-4">
+            <div class="d-flex justify-content-center flex-column me-0">
+                <a href="./detalle_producto.php" class="fs-6 fw-bold text-gray-900 text-hover-primary">
+                    <span><?php echo $evento['nombre']; ?></span>
+                </a>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn btn-outline btn-xs p-1 px-2" id="btn1" data-value="10">$10</button>
+                    <button class="btn btn-outline btn-xs p-1 px-2" id="btn2" data-value="100">$100</button>
+                    <button class="btn btn-outline btn-xs p-1 px-2" id="btn3" data-value="1000">$1,000</button>
+                    <button type="button" class="btn btn-sm btn-light btn-active-light-primary">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
             </div>
-        </div>
-
+        </div>  
     </div>
 <?php
 }
