@@ -27,10 +27,6 @@ $sesion = new Sesion();
                 <!--begin::Content container-->
                 <div id="kt_app_content_container" class="app-container container-fluid">
                     <!--begin::Content-->
-
-                    <!--begin::Separator-->
-                    <div class="separator separator-dashed my-5"></div>
-                    <!--end::Separator-->
                     <div class="d-flex flex-column flex-column-fluid">
                         <div class="bg-light-primary py-10 rounded" style="background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); position: relative;">
                             <div class="container text-center">

@@ -45,8 +45,13 @@ if ($email && $password) {
                 'email' => $userData['email'],
                 'nombre' => $userData['nombre'] ?? '',
                 'img_perfil' => $userData['imagen_perfil'] ?? '',
-                'amistades' => $userData['amistades_enviadas'] ?? [],
-                'productos' => $userData['productos'] ?? []
+                'img_portada' => $userData['imagen_portada'] ?? '',
+                'birthdate' => $userData['birthdate'] ?? '',
+                'phone' => $userData['phone'] ?? '',
+                'amistades_enviadas' => $userData['amistades_enviadas'] ?? [],
+                'amistades_recibidas' => $userData['amistades_recibidas'] ?? [],
+                'productos' => $userData['productos'] ?? [],
+                'compartidos' => $userData['compartidos'] ?? []
             ]);
 
             $sesion->setFlash('success_login', '¡Sesión iniciada correctamente!');

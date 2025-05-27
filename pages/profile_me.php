@@ -5,7 +5,6 @@ $sesion = new Sesion();
 
 // ✅ Verificar si el usuario está logueado
 if (!$sesion->isAuthenticated()) {
-	echo "No hay sesión activa" . $sesion->isAuthenticated();
 	// Redirigir si no hay sesión activa
 	header('Location: ./security/login.php');
 	exit;
@@ -23,6 +22,7 @@ $title = htmlspecialchars($usuario['nombre']);
 
 include_once '../layouts/header.php';
 $productos = $_SESSION['user_data']['productos'] ?? [];
+$compartidos = $_SESSION['user_data']['compartidos'] ?? [];
 
 ?>
 <!--begin::Wrapper-->
