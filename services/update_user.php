@@ -35,6 +35,9 @@ if (isset($_FILES['img_perfil']) && $_FILES['img_perfil']['error'] === UPLOAD_ER
     if ($resultadoPerfil['status'] === 'success') {
         $img_perfil_url = $resultadoPerfil['path'];
     }
+} else {
+    // Si no se subió una imagen de perfil, usar la imagen actual del usuario
+    $img_perfil_url = $sesion->getUserData()['imagen_perfil'] ?? null;
 }
 
 if (isset($_FILES['img_portada']) && $_FILES['img_portada']['error'] === UPLOAD_ERR_OK) {
@@ -42,6 +45,9 @@ if (isset($_FILES['img_portada']) && $_FILES['img_portada']['error'] === UPLOAD_
     if ($resultadoPortada['status'] === 'success') {
         $img_portada_url = $resultadoPortada['path'];
     }
+} else {
+    // Si no se subió una imagen de portada, usar la imagen actual del usuario
+    $img_portada_url = $sesion->getUserData()['imagen_portada'] ?? null;
 }
 
 // URL de la API a la que se enviará la petición PUT
@@ -50,7 +56,7 @@ $apiUrl = $apiBaseUrl . '/usuarios/' . $_POST['id'];
 // Preparar el body para la petición PUT
 $body = [
     'nombre'         => $_POST['nombre'],
-    'email'          => $_POST['email'],
+    'email'          => $_POST['email'],    
     'bio'            => $_POST['bio'],
     'imagen_perfil'  => $img_perfil_url,
     'imagen_portada' => $img_portada_url,
@@ -94,6 +100,6 @@ if ($httpCode == 200) {
     if ($updatedUser && is_array($updatedUser)) {
         $_SESSION['user_data'] = $updatedUser;
     }
-    header('Location: ../pages/profile_me.php');
+    //header('Location: ../pages/profile_me.php');
     exit;
 }

@@ -4,27 +4,27 @@ $sesion = new Sesion();
 
 // ✅ Verificar si el usuario está logueado
 if (!$sesion->isAuthenticated()) {
-	header('Location: ./security/login.php');
-	exit;
+    header('Location: ./security/login.php');
+    exit;
 }
 
 $usuario = $sesion->getUserData();
 
 if (!$usuario) {
-	die('Error al recuperar la información del usuario.');
+    die('Error al recuperar la información del usuario.');
 }
 
 ?>
 
 <div class="card mb-5 mb-xl-10">
-<!--begin::Header-->
+    <!--begin::Header-->
     <div class="card-header border-0 pt-5">
         <h3 class="card-title align-items-start flex-column">
             <span class="card-label fw-bold fs-3 mb-1">Profile Details</span>
         </h3>
     </div>
     <!--begin::Body-->
-    
+
     <!--begin::Form-->
     <form id="kt_account_profile_details_form" class="form" action="../services/update_user.php" method="POST" enctype="multipart/form-data">
         <!--begin::Card body-->
@@ -41,7 +41,7 @@ if (!$usuario) {
                     <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('assets/media/svg/avatars/blank.svg')">
                         <!--begin::Preview existing avatar-->
                         <div class="image-input-wrapper w-125px h-125px">
-                            <img src="<?php echo $usuario['imagen_perfil']; ?>" alt="Foto de perfil" width="125px" height="125px"/>
+                            <img src="<?php echo $usuario['imagen_perfil']; ?>" alt="Foto de perfil" width="125px" height="125px" />
                         </div>
                         <!--end::Preview existing avatar-->
                         <!--begin::Label-->
@@ -52,7 +52,7 @@ if (!$usuario) {
                             </i>
                             <!--begin::Inputs name="avatar"  -->
                             <input type="file" name="img_perfil" accept=".png, .jpg, .jpeg" />
-                            <input type="hidden" />
+                            <!-- <input type="hidden" /> -->
                             <!--end::Inputs-->
                         </label>
                         <!--end::Label-->
@@ -96,10 +96,10 @@ if (!$usuario) {
                                 <span class="path1"></span>
                                 <span class="path2"></span>
                             </i>
-                            
+
                             <!--begin::Inputs-->
                             <input type="file" name="img_portada" accept=".png, .jpg, .jpeg" />
-                            <input type="hidden" />
+                            <!-- <input type="hidden" /> -->
                             <!--end::Inputs-->
                         </label>
                         <!--end::Label-->
@@ -136,8 +136,8 @@ if (!$usuario) {
                 <!--begin::Col-->
                 <div class="col-lg-8">
                     <div class="col-lg-12 fv-row">
-                        <input type="text" name="nombre" 
-                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                        <input type="text" name="nombre"
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                             placeholder="Nombre" value="<?php echo $usuario['nombre']; ?>" />
                     </div>
                 </div>
@@ -154,7 +154,7 @@ if (!$usuario) {
                     <!--begin::Col-->
                     <div class="col-lg-6 fv-row">
                         <input type="date" name="birthdate"
-                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                             value="<?php echo isset($usuario['birthdate']) ? date('Y-m-d', strtotime($usuario['birthdate'])) : ''; ?>" />
                     </div>
                     <!--end::Col-->
@@ -169,15 +169,15 @@ if (!$usuario) {
                 <!--end::Label-->
                 <!--begin::Col-->
                 <div class="col-lg-8 fv-row">
-                    <textarea name="bio" 
-                        class="form-control form-control-lg form-control-solid" 
-                        value="<?php echo $usuario['bio']; ?>">
+                    <textarea
+                        class="form-control form-control-lg form-control-solid"
+                        name="bio"><?php echo htmlspecialchars($usuario['bio']); ?>
                     </textarea>
                 </div>
                 <!--end::Col-->
             </div>
             <!--end::Input group-->
-           
+
             <!--begin::Input group-->
             <div class="row mb-6">
                 <!--begin::Label-->
@@ -190,7 +190,7 @@ if (!$usuario) {
                 <!--end::Col-->
             </div>
             <!--end::Input group-->
-            
+
             <!--begin::Input group Phone -->
             <div class="row mb-6">
                 <!--begin::Label-->
@@ -207,7 +207,8 @@ if (!$usuario) {
                 <!--end::Label-->
                 <!--begin::Col-->
                 <div class="col-lg-8 fv-row">
-                    <input type="tel" name="phone" class="form-control form-control-lg form-control-solid" placeholder="Phone number" value="<?php echo '5593394644' //$usuario['nombre']; ?>" />
+                    <input type="tel" name="phone" class="form-control form-control-lg form-control-solid" placeholder="Phone number" value="<?php echo '5593394644' //$usuario['nombre']; 
+                                                                                                                                                ?>" />
                 </div>
                 <!--end::Col-->
             </div>
@@ -224,7 +225,7 @@ if (!$usuario) {
                 <!--end::Col-->
             </div>
             <!--end::Input group-->
-              
+
         </div>
         <!--end::Card body-->
         <!--begin::Actions-->
@@ -396,8 +397,9 @@ if (!$usuario) {
                 <div class="d-flex flex-stack flex-grow-1">
                     <!--begin::Content-->
                     <div class="fw-semibold">
-                        <div class="fs-6 text-gray-700">Two-factor authentication adds an extra layer of security to your account. To log in, in you'll need to provide a 4 digit amazing code. 
-                        <a href="#" class="fw-bold">Learn More</a></div>
+                        <div class="fs-6 text-gray-700">Two-factor authentication adds an extra layer of security to your account. To log in, in you'll need to provide a 4 digit amazing code.
+                            <a href="#" class="fw-bold">Learn More</a>
+                        </div>
                     </div>
                     <!--end::Content-->
                 </div>
@@ -424,7 +426,7 @@ if (!$usuario) {
                 </div>
                 <!--end::Item-->
                 <div class="separator separator-dashed my-5"></div>
-                
+
             </div>
             <!--end::Items-->
         </div>
@@ -468,9 +470,10 @@ if (!$usuario) {
                         <!--begin::Content-->
                         <div class="fw-semibold">
                             <h4 class="text-gray-900 fw-bold">You Are Deactivating Your Account</h4>
-                            <div class="fs-6 text-gray-700">For extra security, this requires you to confirm your email or phone number when you reset yousignr password. 
-                            <br />
-                            <a class="fw-bold" href="#">Learn more</a></div>
+                            <div class="fs-6 text-gray-700">For extra security, this requires you to confirm your email or phone number when you reset yousignr password.
+                                <br />
+                                <a class="fw-bold" href="#">Learn more</a>
+                            </div>
                         </div>
                         <!--end::Content-->
                     </div>

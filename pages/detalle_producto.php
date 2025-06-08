@@ -575,7 +575,7 @@ include '../includes/components/product_card.php';
                                 <div class="product-item">
                                     <?php mostrarProducto(12); ?>
                                 </div>
-                                
+
                                 <!-- Agrega más productos si es necesario -->
                             </div>
                         </div>

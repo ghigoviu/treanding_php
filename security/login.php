@@ -43,9 +43,10 @@ if ($email && $password) {
             $sesion->login($userData['id'], [
                 'id' => $userData['id'],
                 'email' => $userData['email'],
+                'bio' => $userData['bio'],
                 'nombre' => $userData['nombre'] ?? '',
-                'img_perfil' => $userData['imagen_perfil'] ?? '',
-                'img_portada' => $userData['imagen_portada'] ?? '',
+                'imagen_perfil' => $userData['imagen_perfil'] ?? '',
+                'imagen_portada' => $userData['imagen_portada'] ?? '',
                 'birthdate' => $userData['birthdate'] ?? '',
                 'phone' => $userData['phone'] ?? '',
                 'amistades_enviadas' => $userData['amistades_enviadas'] ?? [],

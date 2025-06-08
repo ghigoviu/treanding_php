@@ -7,7 +7,7 @@ $usuario = $sesion->getUserData();
 <div class="app-navbar-item ms-1 ms-md-4" id="kt_header_user_menu_toggle">
 	<!--begin::Menu wrapper-->
 	<div class="cursor-pointer symbol symbol-35px" data-kt-menu-trigger="{default: 'click', lg: 'click'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
-		<img src="<?php echo $usuario['imagen_perfil']; ?>" class="rounded-3" alt="Profile photo of <?php echo htmlspecialchars($_SESSION['user_data']['nombre']); ?> smiling in the user menu section with account options visible nearby" />
+		<img src="<?php echo $usuario['imagen_perfil']; ?>" class="rounded-3" alt="Profile photo of <?php echo htmlspecialchars( $usuario['nombre'] ) ?>" />
 	</div>
 	<!--begin::User account menu-->
 	<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px" data-kt-menu="true">
