@@ -41,7 +41,7 @@ if (!$usuario) {
                     <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('assets/media/svg/avatars/blank.svg')">
                         <!--begin::Preview existing avatar-->
                         <div class="image-input-wrapper w-125px h-125px">
-                            <img src="<?php echo $usuario['img_perfil']; ?>" alt="Foto de perfil" />
+                            <img src="<?php echo $usuario['imagen_perfil']; ?>" alt="Foto de perfil" width="125px" height="125px"/>
                         </div>
                         <!--end::Preview existing avatar-->
                         <!--begin::Label-->
@@ -51,7 +51,7 @@ if (!$usuario) {
                                 <span class="path2"></span>
                             </i>
                             <!--begin::Inputs name="avatar"  -->
-                            <input type="file" accept=".png, .jpg, .jpeg" />
+                            <input type="file" name="img_perfil" accept=".png, .jpg, .jpeg" />
                             <input type="hidden" />
                             <!--end::Inputs-->
                         </label>
@@ -84,7 +84,11 @@ if (!$usuario) {
                     <!--begin::Image input-->
                     <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('assets/media/svg/avatars/blank.svg')">
                         <!--begin::Preview existing avatar-->
-                        <div class="image-input-wrapper w-275px h-125px" style="background-image: url(assets/media/auth/bg2.jpg)"></div>
+                        <div class="image-input-wrapper w-275px h-125px" style="background-image: url(assets/media/auth/bg2.jpg)">
+                            <div class="image-input-wrapper w-275px h-125px">
+                                <img src="<?php echo $usuario['imagen_portada']; ?>" alt="Foto de portada" width="275px" height="125px" />
+                            </div>
+                        </div>
                         <!--end::Preview existing avatar-->
                         <!--begin::Label-->
                         <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
@@ -165,7 +169,10 @@ if (!$usuario) {
                 <!--end::Label-->
                 <!--begin::Col-->
                 <div class="col-lg-8 fv-row">
-                    <textarea name="bio" class="form-control form-control-lg form-control-solid" value="<?php echo $usuario['bio'] ?>"></textarea>
+                    <textarea name="bio" 
+                        class="form-control form-control-lg form-control-solid" 
+                        value="<?php echo $usuario['bio']; ?>">
+                    </textarea>
                 </div>
                 <!--end::Col-->
             </div>

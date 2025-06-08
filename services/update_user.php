@@ -1,8 +1,11 @@
 <?php
 require_once '../controller/Sesion.php';
+require_once 'upload_helper.php';
 
 $config = require '../config.php';
 $apiBaseUrl = $config['api_base_url'];
+$uploadBaseDir = $config['upload_url'] . '/media/Users/';
+$baseUrl = $config['public_url'] . '/media/Users/'; // Para la URL pública
 $sesion = new Sesion();
 
 // Verificar que la petición sea POST
@@ -13,14 +16,34 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Validar que los campos requeridos existen
-$required = ['nombre', 'email', 'bio', 'phone', 'birthdate'];
+$required = ['id', 'nombre', 'email', 'bio', 'phone', 'birthdate'];
 foreach ($required as $field) {
     if (empty($_POST[$field])) {
         http_response_code(400);
         echo json_encode(['error' => "Falta el campo: $field"]);
         exit;
-    }>
+    }
 }
+
+$id_usuario = intval($_POST['id']);
+$img_perfil_url = null;
+$img_portada_url = null;
+
+// Validar archivos subidos
+if (isset($_FILES['img_perfil']) && $_FILES['img_perfil']['error'] === UPLOAD_ERR_OK) {
+    $resultadoPerfil = subirArchivo($_FILES['img_perfil'], 'perfil', $id_usuario, $uploadBaseDir, $baseUrl);
+    if ($resultadoPerfil['status'] === 'success') {
+        $img_perfil_url = $resultadoPerfil['path'];
+    }
+}
+
+if (isset($_FILES['img_portada']) && $_FILES['img_portada']['error'] === UPLOAD_ERR_OK) {
+    $resultadoPortada = subirArchivo($_FILES['img_portada'], 'portada', $id_usuario, $uploadBaseDir, $baseUrl);
+    if ($resultadoPortada['status'] === 'success') {
+        $img_portada_url = $resultadoPortada['path'];
+    }
+}
+
 // URL de la API a la que se enviará la petición PUT
 $apiUrl = $apiBaseUrl . '/usuarios/' . $_POST['id'];
 
@@ -29,8 +52,8 @@ $body = [
     'nombre'         => $_POST['nombre'],
     'email'          => $_POST['email'],
     'bio'            => $_POST['bio'],
-    'img_perfil'     => $_POST['img_perfil'],
-    'img_portada'    => $_POST['img_portada'],
+    'imagen_perfil'  => $img_perfil_url,
+    'imagen_portada' => $img_portada_url,
     'phone'          => $_POST['phone'],
     'birthdate'      => $_POST['birthdate'],
 ];
@@ -57,13 +80,20 @@ if (curl_errno($ch)) {
     echo $response;
 }
 
+
+echo "<pre>";
+print_r($_FILES);
+print_r($body);
+echo "</pre>";
+
+
 curl_close($ch);
-session_start();
+session_reset();
 if ($httpCode == 200) {
     $updatedUser = json_decode($response, true);
     if ($updatedUser && is_array($updatedUser)) {
         $_SESSION['user_data'] = $updatedUser;
     }
-    header('Location: ../pages/profile.php');
+    header('Location: ../pages/profile_me.php');
     exit;
 }

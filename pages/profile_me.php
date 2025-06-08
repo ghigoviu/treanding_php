@@ -3,26 +3,23 @@ include '../includes/components/product_card.php';
 require_once '../controller/Sesion.php';
 $sesion = new Sesion();
 
-// ✅ Verificar si el usuario está logueado
 if (!$sesion->isAuthenticated()) {
+	echo "No hay sesión activa" . $sesion->isAuthenticated();
 	// Redirigir si no hay sesión activa
 	header('Location: ./security/login.php');
 	exit;
 }
-
-// ✅ Obtener los datos del usuario desde la sesión
 $usuario = $sesion->getUserData();
 
 if (!$usuario) {
 	die('Error al recuperar la información del usuario.');
 }
-
-// ✅ Definir el título dinámicamente
 $title = htmlspecialchars($usuario['nombre']);
 
 include_once '../layouts/header.php';
 $productos = $_SESSION['user_data']['productos'] ?? [];
-$compartidos = $_SESSION['user_data']['compartidos'] ?? [];
+$amistades_enviadas = $_SESSION['user_data']['amistades_enviadas'] ?? [];
+$amistades_recibidas = $_SESSION['user_data']['amistades_recibidas'] ?? [];
 
 ?>
 <!--begin::Wrapper-->
@@ -37,7 +34,8 @@ $compartidos = $_SESSION['user_data']['compartidos'] ?? [];
 				<div id="kt_app_content_container" class="app-container container-fluid">
 					<div class="d-flex flex-column flex-column-fluid">
 						<!-- Banner del perfil -->
-						<?php include_once "../includes/components/notif_seguidos.php" ?>
+						 
+						<?php // include_once "../includes/components/notif_seguidos.php" ?>
 
 						<div class="profile-banner position-relative z-n1"></div>
 						<!-- end::Banner del perfil -->
@@ -48,7 +46,10 @@ $compartidos = $_SESSION['user_data']['compartidos'] ?? [];
 							<div class="col-md-2">
 								<div class="d-flex flex-column flex-shrink-0 p-3 bg-light sidebar">
 									<div class="profile-card bg-white p-2 rounded shadow">
-										<img src="<?php echo $usuario['img_perfil']; ?>" class="rounded-circle profile-picture z-3" alt="Profile Picture">
+										<img src="
+											<?php echo $usuario['imagen_perfil']; ?>
+											" 
+											class="rounded-circle profile-picture z-3" alt="Profile Picture">
 										<h4 class="mb-0"><?php echo $usuario['nombre']; ?></h4>
 										<p class="text-muted"><?php echo '@' . strtolower($usuario['nombre']); ?></p>
 										<div class="d-flex justify-content-center gap-4">

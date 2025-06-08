@@ -96,7 +96,6 @@ $sesion = new Sesion();
 					<span class="menu-title"> </span>
 					<span class="menu-arrow d-lg-none"></span>
 				</span>
-
 			</div>
 			<!--end:Menu item-->
 		</div>
