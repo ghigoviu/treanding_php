@@ -1,16 +1,15 @@
 <?php
 $title = "Marketplace";
-session_start();
+require_once '../controller/Sesion.php';
+
+$sesion = new Sesion();
 
 include '../layouts/header.php';
 include '../includes/components/product_card.php';
 include '../includes/components/event_card.php';
 include '../includes/components/charity_card.php';
-require_once '../controller/Sesion.php';
 
-$sesion = new Sesion();
 ?>
-
 
 <!--begin::Wrapper-->
 <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">

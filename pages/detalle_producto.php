@@ -1,7 +1,24 @@
 <?php
 $title = "Detalle producto";
+$id_producto = $_GET['id'] ?? null;
+
+require_once '../controller/Sesion.php';
+$config = require '../config.php';
+
+$apiBaseUrl = $config['api_base_url'];
+$url = $apiBaseUrl . "/productos/id/" . $id_producto;
+$sesion = new Sesion();
+$usuario = $sesion->getUserData();
+$response = file_get_contents($url);
+if ($response !== false) {
+    $producto = json_decode($response, true); 
+} else {
+    echo "Error al hacer la petición.";
+}
+
 include '../layouts/header.php';
 include '../includes/components/product_card.php';
+
 ?>
 <!--begin::Wrapper-->
 <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
@@ -40,30 +57,14 @@ include '../includes/components/product_card.php';
                                             data-tns-nav-as-thumbnails="true"
                                             data-tns-prev-button="#kt_slider_prev"
                                             data-tns-next-button="#kt_slider_next">
-                                            <!--begin::Item-->
-                                            <div class="text-center px-2 py-2">
-                                                <img src="../assets/media/stock/600x400/img-1.jpg"
-                                                    class="card-rounded mw-100" alt="" />
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="text-center px-2 py-2">
-                                                <img src="../assets/media/stock/600x400/img-2.jpg"
-                                                    class="card-rounded mw-100" alt="" />
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="text-center px-2 py-2">
-                                                <img src="../assets/media/stock/600x400/img-3.jpg"
-                                                    class="card-rounded mw-100" alt="" />
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="text-center px-2 py-2">
-                                                <img src="../assets/media/stock/600x400/img-4.jpg"
-                                                    class="card-rounded mw-100" alt="" />
-                                            </div>
-                                            <!--end::Item-->
+                                            <?php
+                                            foreach ($producto['imagenes'] as $imagen) {
+                                                echo '<div class="text-center px-2 py-2">';
+                                                echo '<img src="' . htmlspecialchars($imagen['url']) . '" class="card-rounded mw-100" alt="" />';
+                                                echo '</div>';
+                                            }
+                                            ?>
+                                            
                                         </div>
                                         <!--end::Slider-->
                                         <!--begin::Slider button-->
@@ -85,14 +86,12 @@ include '../includes/components/product_card.php';
                                         <ul
                                             class="d-flex align-items-center list-unstyled gap-5 cursor-pointer">
                                             <li class="d-flex gap-3" id="kt_slider_thumbnails">
-                                                <img src="../assets/media/stock/600x400/img-1.jpg"
-                                                    class="w-100px rounded" alt="" />
-                                                <img src="../assets/media/stock/600x400/img-2.jpg"
-                                                    class="w-100px rounded" alt="" />
-                                                <img src="../assets/media/stock/600x400/img-3.jpg"
-                                                    class="w-100px rounded" alt="" />
-                                                <img src="../assets/media/stock/600x400/img-4.jpg"
-                                                    class="w-100px rounded" alt="" />
+                                                <?php
+                                                foreach ($producto['imagenes'] as $imagen) {
+                                                    echo '<img src="' . htmlspecialchars($imagen['url']) . '" class="w-100px rounded" alt="" />';
+                                                }
+                                                ?>
+
                                             </li>
                                         </ul>
                                     </div>
@@ -103,7 +102,9 @@ include '../includes/components/product_card.php';
 
                                     <!-- Information product  -->
                                     <div class="mb-5">
-                                        <h2 class="text-dark">Tennis Nike para Corredor</h2>
+                                        <h2 class="text-dark">
+                                            <?php echo htmlspecialchars($producto['nombre']) ?>
+                                        </h2>
                                         <div class="d-flex flex-wrap">
                                             <div class="rating justify-content-start">
                                                 <!--begin::Star 1-->
@@ -154,8 +155,6 @@ include '../includes/components/product_card.php';
                                         <div class="d-flex align-items-center gap-2">
                                             <span class="badge badge-light-primary">#tag</span>
                                             <span class="badge badge-light-primary">#tag</span>
-                                            <span class="badge badge-light-primary">#tag</span>
-                                            <span class="badge badge-light-primary">#tag</span>
                                         </div>
                                         <!--end::Info-->
                                     </div>
@@ -193,35 +192,11 @@ include '../includes/components/product_card.php';
                                     <div class="tab-content" id="myTabContent">
                                         <div class="tab-pane fade show active" id="kt_tab_pane_1" role="tabpanel">
                                             <!--begin::About-->
-                                            <h3 class="fw-bold mb-5">About</h3>
+                                            <h3 class="fw-bold mb-5">Descripcion</h3>
                                             <p class=" fs-7 lh-xl text-justify">
-                                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-                                                ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
-                                                porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                                adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore
-                                                et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
-                                                nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid
-                                                ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
-                                                voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem
-                                                eum fugiat quo voluptas nulla pariatur?
+                                                <?php echo htmlspecialchars($producto['descripcion']) ?>
                                             </p>
                                             <!--end::About-->
-                                        </div>
-                                        <div class="tab-pane fade" id="kt_tab_pane_2" role="tabpanel">
-                                            <!-- begin::Specifications -->
-                                            <h3 class="fw-bold mb-5">Specifications</h3>
-                                            <p class=" fs-7 lh-xl text-justify">
-                                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-                                                ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
-                                                porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                            </p>
-                                            <!-- end::Specifications -->
                                         </div>
                                         <div class="tab-pane fade" id="kt_tab_pane_3" role="tabpanel">
                                             <!-- begin::Accesories -->
@@ -274,8 +249,6 @@ include '../includes/components/product_card.php';
                                         </div>
                                         <div class="tab-pane fade" id="kt_tab_pane_5" role="tabpanel">
                                             <!-- begin::Reviews -->
-
-                                            <!--begin::Body-->
                                             <div class="fs-6 fw-semibold mb-5 d-flex flex-wrap">
                                                 <h3 class="fw-bold mb-5 me-5">Reviews</h3>
                                                 <!--begin::Rating-->
@@ -298,15 +271,17 @@ include '../includes/components/product_card.php';
                                                 </div>
                                                 <!--end::Rating-->
                                                 <!--begin::Text-->
-                                                <p class="mb-0">5.0</p>
+                                                <p class="mb-0">4.0</p>
                                                 <!--end::Text-->
                                             </div>
-                                            <!--end::Body-->
                                             <!--begin::Comment-->
+                                            <?php foreach ($producto['reviews'] as $review) : { ?>  
                                             <div class="d-flex">
                                                 <!--begin::Avatar-->
                                                 <div class="symbol symbol-45px me-5">
-                                                    <img src="../assets/media/avatars/300-13.jpg" alt="">
+                                                    <img 
+                                                    src="<?php echo htmlspecialchars($review['usuario']['imagen_perfil']); ?>" 
+                                                    alt="">
                                                 </div>
                                                 <!--end::Avatar-->
                                                 <!--begin::Wrapper-->
@@ -314,7 +289,9 @@ include '../includes/components/product_card.php';
                                                     <!--begin::Info-->
                                                     <div class="d-flex align-items-center flex-wrap mb-0">
                                                         <!--begin::Name-->
-                                                        <a href="#" class="text-gray-800 text-hover-primary fw-bold me-6">Mr. Anderson</a>
+                                                        <a href="#" class="text-gray-800 text-hover-primary fw-bold me-6">
+                                                            <?php echo htmlspecialchars($review['usuario']['nombre']); ?>
+                                                        </a>
                                                         <!--end::Name-->
                                                         <!--begin::rating-->
                                                         <div class="rating">
@@ -338,17 +315,19 @@ include '../includes/components/product_card.php';
                                                     </div>
                                                     <!--end::Info-->
                                                     <!--begin::Text-->
-                                                    <span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper you need to make sure you have to sit down and write.</span>
+                                                    <span class="text-gray-800 fs-7 fw-normal pt-1">
+                                                        <?php echo htmlspecialchars($review['comentario']); ?>
+                                                    </span>
                                                     <!--end::Text-->
                                                 </div>
                                                 <!--end::Wrapper-->
                                             </div>
+                                            <?php } endforeach; ?>
                                             <!--end::Comment-->
-
                                             <div class="d-flex align-items-center pt-5">
                                                 <!--begin::Author-->
                                                 <div class="symbol symbol-35px me-3">
-                                                    <img src="../assets/media/avatars/300-3.jpg" alt="">
+                                                    <img src="<?php echo htmlspecialchars($usuario['imagen_perfil']) ?>" alt="">
                                                 </div>
                                                 <!--end::Author-->
                                                 <!--begin::Input group-->
@@ -358,7 +337,6 @@ include '../includes/components/product_card.php';
                                                     <!--end::Input-->
                                                     <!--begin::Actions-->
                                                     <div class="position-absolute top-0 end-0 translate-middle-x mt-1 me-n2">
-
                                                         <!--begin::Btn-->
                                                         <button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
                                                             <i class="fa-solid fa-paper-plane"></i>
@@ -370,7 +348,6 @@ include '../includes/components/product_card.php';
                                                 <!--end::Input group-->
                                             </div>
                                             <!-- end::Reviews -->
-
                                         </div>
                                     </div>
                                 </div>
@@ -404,7 +381,7 @@ include '../includes/components/product_card.php';
                                         <!--begin::Buttons-->
                                     </div>
                                     <!--end::Select Quality-->
-                                    <!--begin::Select Quality-->
+                                    <!--begin::Select Style-->
                                     <div class="d-flex flex-column mb-5 fv-row">
                                         <!--begin::Label-->
                                         <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
@@ -458,14 +435,16 @@ include '../includes/components/product_card.php';
                                     <div class="d-flex justify-content-center px-0">
                                         <div class="mb-0 text-center">
                                             <span class="fs-1  text-gray-500 me-1 mt-n1">$</span>
-                                            <span class="fs-3x fw-bold " id="valuePrice">500.00</span>
+                                            <span class="fs-3x fw-bold " id="valuePrice">
+                                                <?php echo htmlspecialchars($producto['precio']) ?>
+                                            </span>
                                         </div>
                                         <div class="py-3 px-2 ">
                                             <!--begin::Number-->
                                             <div class="d-flex align-items-center">
                                                 <span class="badge badge-danger fs-base ">-20%</span>
                                             </div>
-                                            <div class="fw-semibold fs-6 ">600.00</div>
+                                            <div class="fw-semibold fs-6 ">60.00</div>
                                             <!--end::Label-->
                                         </div>
 
@@ -484,10 +463,7 @@ include '../includes/components/product_card.php';
                                         </a>
                                         <button type="button" class="btn btn-primary w-100">Add to cart</button>
                                     </div>
-
                                 </div>
-
-
                             </div>
                             <!--end::Content-->
 
@@ -496,46 +472,39 @@ include '../includes/components/product_card.php';
                                 <!--begin::Header-->
                                 <div class="card-header border-0 pt-5">
                                     <h3 class="card-title align-items-start flex-column">
-                                        <span class="card-label fw-bold text-gray-900">Created by</span>
+                                        <span class="card-label fw-bold text-gray-900">Creado por</span>
                                     </h3>
-
                                 </div>
                                 <!--end::Header-->
                                 <!--begin::Body-->
                                 <div class="card-body pt-5">
-                                    <?php
-                                    for ($i = 0; $i < 3; $i++) {
-                                        echo '
-                                        <!--begin::Item-->
-                                            <div class="d-flex flex-stack">
-                                                <!--begin::Symbol-->
-                                                <div class="symbol symbol-40px me-5">
-                                                    <img src="../assets/media/avatars/300-9.jpg" class="h-50 align-self-center" alt="" />
-                                                </div>
-                                                <!--end::Symbol-->
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center flex-row-fluid flex-wrap">
-                                                    <!--begin:Author-->
-                                                    <div class="flex-grow-1 me-2">
-                                                        <a href="javascript:void(0)" class="text-gray-800 text-hover-primary fs-6 fw-bold">Jacob Jones</a>
-                                                        <span class="text-muted fw-semibold d-block fs-7">Barone LLC.</span>
-                                                    </div>
-                                                    <!--end:Author-->
-                                                    <!--begin:Action-->
-                                                    <a href="javascript:void(0)" class="btn btn-sm btn-light fs-8 fw-bold">invite</a>
-                                                    <!--end:Action-->
-                                                </div>
-                                                <!--end::Section-->
+                                    <!--begin::Item-->
+                                    <div class="d-flex flex-stack">
+                                        <!--begin::Symbol-->
+                                        <div class="symbol symbol-40px me-5">
+                                            <img 
+                                            src="../assets/media/avatars/300-9.jpg" 
+                                            class="h-50 align-self-center" alt="" />
+                                        </div>
+                                        <!--end::Symbol-->
+                                        <!--begin::Section-->
+                                        <div class="d-flex align-items-center flex-row-fluid flex-wrap">
+                                            <!--begin:Author-->
+                                            <div class="flex-grow-1 me-2">
+                                                <a href="javascript:void(0)" class="text-gray-800 text-hover-primary fs-6 fw-bold">Jacob Jones</a>
+                                                <span class="text-muted fw-semibold d-block fs-7">Barone LLC.</span>
                                             </div>
-                                            <!--end::Item-->
-                                            <!--begin::Separator-->
-                                            <div class="separator separator-dashed my-4"></div>
-                                            <!--end::Separator-->
-                                        ';
-                                    }
-                                    ?>
-
-
+                                            <!--end:Author-->
+                                            <!--begin:Action-->
+                                            <a href="javascript:void(0)" class="btn btn-sm btn-light fs-8 fw-bold">invite</a>
+                                            <!--end:Action-->
+                                        </div>
+                                        <!--end::Section-->
+                                    </div>
+                                    <!--end::Item-->
+                                    <!--begin::Separator-->
+                                    <div class="separator separator-dashed my-4"></div>
+                                    <!--end::Separator-->
                                 </div>
                                 <!--end::Body-->
                             </div>
@@ -600,7 +569,6 @@ include '../includes/components/product_card.php';
         <!--end::Footer-->
     </div>
     <!--end:::Main-->
-
-</div>
+</div>	
 <!--end::Wrapper-->
 <?php include '../layouts/footer.php'; ?>

@@ -100,6 +100,6 @@ if ($httpCode == 200) {
     if ($updatedUser && is_array($updatedUser)) {
         $_SESSION['user_data'] = $updatedUser;
     }
-    //header('Location: ../pages/profile_me.php');
+    header('Location: ../pages/profile_me.php');
     exit;
 }

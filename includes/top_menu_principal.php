@@ -1,6 +1,9 @@
 <?php
 require_once '../controller/Sesion.php';
 $sesion = new Sesion();
+
+//require_once '../controller/Sesion.php';
+//$sesion = new Sesion();
 ?>
 
 <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1" id="kt_app_header_wrapper">

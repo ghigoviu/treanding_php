@@ -42,6 +42,11 @@ class Sesion
         return $_SESSION['user_data'] ?? [];
     }
 
+    public function getProductos()
+    {
+        return $_SESSION['user_data']['productos'] ?? [];
+    }
+
     public function setFlash($key, $message)
     {
         $_SESSION['flash'][$key] = $message;
